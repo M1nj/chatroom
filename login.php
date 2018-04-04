@@ -47,18 +47,19 @@
         <div class="row"> 
             <div class="form-group mx-sm-3">
                 <label>Nickname</label>
-                <input type="username" class="form-control" name="nickname" placeholder="John Smith">
+                <input type="username" class="form-control" name="nickname" placeholder="Your email">
             </div>
         </div>
         <div class="row"> 
             <div class="form-group mx-sm-3">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" placeholder="******">
+                <input type="password" name="password" class="form-control" placeholder="Your password">
             </div>
         </div>
-        <div class="row mx-sm-3">
-            <button type="submit" class="btn btn-primary">Log in</button>
-        </div>
+        <div class="row">
+            <button type="button" class="btn btn-outline-secondary">Submit</button>
+            <a class="forgot-password" href="#">I forgot my password</a>
+    </div>    
     </form>
 </div>
 </html>
