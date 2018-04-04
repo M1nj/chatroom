@@ -1,9 +1,15 @@
 html{
     height: 100%;
 }
+div#home:first-child {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 40%;
+}
 div#home {
     text-align: center;
-    margin-top: 40%;
+    vertical-align: middle;
+    margin-bottom: 30px;
 }
 button#button{
     margin: 1%;
@@ -12,4 +18,65 @@ button#button{
 
 body.fond{
     background: linear-gradient(114deg, #8db7d7, #9e90c1);
-    
+}
+
+p.hometext{
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 40%;
+}
+button.btn.btn-primary:first-child{
+background-color: #00000000;
+border-color: white;
+border-width: 2%;
+border-radius: 50px;
+width: 50px;
+}
+button.btn.btn-secondary:first-child{
+background-color: #ffffff;
+color: black;
+border-color: white;
+border-width: 2%;
+border-radius: 50px;
+width: 50px;
+}
+
+img.logo{
+    height: auto;
+    width: 30%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+div{
+    text-align: center;
+}
+
+button.btn.btn-secondary{
+    background-color: #ffffff;
+    color: black;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    width: 50px;
+    }
+
+button#valid_button{
+    background-color: green;
+    color: white;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    margin-left: 5%;
+    width: 30%;
+}
+
+button#cancel_button{
+    background-color: maroon;
+    color: white;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    margin-right: 5%;
+    width: 30%;
+}

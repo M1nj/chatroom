@@ -27,7 +27,12 @@
         
         if (!$resultat)
         {
-            echo '<script>console.log("pouet")</script>';
+            /*echo '<script>swal({
+                type: "error",
+                title: "Error",
+                text: "The nickname or the password is incorrect, please try again.",
+                footer: "<a href>Forgot my password</a>",
+              })</script>';*/
         }
         else
         {
@@ -41,8 +46,15 @@
     ?>
 
 <body class="fond">
+    <div class="container-fluid">
+        <img class="logo" src="IMG/logo.png">
+</div>
   <div id="home" class="container-fluid">
+      <p class="hometext">Already a member?</p>
       <a href="#"><button type="button" id="button" class="btn btn-primary" onclick="test()" >Sign in</button></a>
+      </div>
+    <div id="home" class="container-fluid">
+      <p class="hometext">Want to be part of the community?</p>
       <a href="register.php"><button type="button" id="button" class="btn btn-secondary" href="register.php">Sign Up</button></a>
   </div>
 </body>
@@ -53,8 +65,8 @@ function test (){
 swal({
   title: 'Welcome back',
   html:
-    '<form method="post"><input type= "nickname" id="swal-input1" class="swal2-input" name="nickname">' +
-    '<input type="password" id="swal-input2" class="swal2-input" name="password">'+'<button class="btn btn-secondary">Cancel</button>'+'<button type="submit" class="btn btn-primary">Log in</button>'+'</form>',
+    '<form method="post"><input type= "nickname" id="swal-input1" class="swal2-input" name="nickname" placeholder="Guillaume">' +
+    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<button id="cancel_button" class="btn btn-secondary">Cancel</button>'+'<button type="submit" id="valid_button" class="btn btn-primary">Log in</button>'+'</form>',
     showConfirmButton: false,
 })
 }
