@@ -28,7 +28,7 @@
         
         if (!$resultat)
         {
-            echo 'Wrong nickname or password';
+            echo '<script>console.log("pouet")';
         }
         else
         {
