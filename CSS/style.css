@@ -73,22 +73,13 @@ button#valid_button{
 button#valid_button:hover{
     background-color: green;
     color: white;
-    border-color: green;
+    border-color: white;
     border-width: 2%;
     border-radius: 50px;
     margin-left: 5%;
     width: 30%;
 }
 
-button#cancel_button:hover{
-    background-color: maroon;
-    color: white;
-    border-color: white;
-    border-width: 2%;
-    border-radius: 50px;
-    margin-right: 5%;
-    width: 30%;
-}
 .title{
     font-size: 40px;
     font-family: sans-serif;
