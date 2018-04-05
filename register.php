@@ -109,7 +109,7 @@
 </p>
     <div class="container">
     <h1 class="title">Welcome !</h1>
-    <p>Fill in the form to be part of our community<p>
+    <p>Fill in the form to be part of our community<p> 
         <form class="form register" method="post" action="register.php">
   <div class="form-group">
     <input type="text" class="form-control" name="nickname" placeholder="Pick your nickname">
