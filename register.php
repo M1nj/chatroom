@@ -103,6 +103,11 @@
 
 
 <!DOCTYPE html>
+
+<div class="container">
+    <a href="index.php"><button class="btn btn-warning">Back to the homepage</button></a>
+</div>
+
     <div class="container">
         <form class="form register" method="post" action="register.php">
   <div class="form-group">
