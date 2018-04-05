@@ -40,7 +40,7 @@
             $_SESSION['password'] = $password;
             //$_SESSION['id'] = $resultat['id'];
             $_SESSION["isConnected"]= true;
-            echo '<script>console.log("success")</script>';
+            header ('location: chatroom.php');;
         }
     }
     ?>
