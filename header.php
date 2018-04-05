@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Hello, world!</title>
+        <title>Best chatrooms ever !</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
@@ -16,4 +16,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     </head>
 
+
+<header class="header">
+<div>
+    <a href="/index.php"><img class="header-logo" src="IMG/logo.png"alt=""></a> 
+</div>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="">My Chatrooms</a></li>
+        <li><a href="">Log Out</a></li> 
+        <a href="/login.php"><li class="profil"><img src="IMG/profile-10.png"></li></a>
+    </ul>
+</nav>
+
+
+</header>
+
 </html>
+
+
