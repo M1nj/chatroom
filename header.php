@@ -18,15 +18,12 @@
 
 
 <header class="header">
-<div>
-    <a href="/index.php"><img class="header-logo" src="IMG/logo.png"alt=""></a> 
-</div>
-
+<a href="index.php"><img class="header-logo" src="IMG/logo.png"alt=""></a>
 <nav class="navbar">
     <ul>
         <li><a href="">My Chatrooms</a></li>
-        <li><a href="">Log Out</a></li> 
-        <a href="/login.php"><li class="profil"><img src="IMG/profile-10.png"></li></a>
+        <li><a href="index.php">Log Out</a></li> 
+        <a href="profile.php"><li class="profil"><img src="IMG/profile-10.png"></li></a>
     </ul>
 </nav>
 
