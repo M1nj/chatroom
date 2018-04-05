@@ -46,7 +46,7 @@
     ?>
 
 <body>
-    <div class="container-fluid">
+    <div id="image"class="container-fluid">
         <img class="logo" src="IMG/logo.png">
 </div>
   <div id="home" class="container-fluid">
@@ -58,7 +58,9 @@
       <a href="register.php"><button type="button" id="button" class="btn btn-secondary" href="register.php">Sign Up</button></a>
   </div>
   <div class="cookies">
-Lorem ipsum
+    <span>By continuing your navigation, you authorize us to place cookies for audience measurement purposes.</span>
+    <button type="button" class="btn btn-success">Accept</button>
+    <button type="button" class="btn btn-danger">Decline</button>
   </div>
 </body>
 

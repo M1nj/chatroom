@@ -1,5 +1,5 @@
 html{
-    height: auto;
+    height: 100%;
 }
 div#home:first-child {
     text-align: center;
@@ -10,8 +10,12 @@ div#home:first-child {
 div#home {
     text-align: center;
     vertical-align: middle;
-   
 }
+
+div#image{
+    width: 30%;
+}
+
 button#button{
     margin: 1%;
     width: 10%;
@@ -45,9 +49,10 @@ width: 50px;
 
 img.logo{
     height: auto;
-    width: 30%;
+    width: 100%;
     margin-bottom: 10%;
     margin-top: 5%;
+    margin-left: 0;
 }
 div{
     text-align: center;
@@ -182,8 +187,19 @@ p{
     color: white;
 }
 div.cookies{
+    display: inline-block;
     background-color: #00000070;
-    top: 0%;
-    bottom: auto;
-    float: inherit;
+    bottom: 0%;
+    position: absolute;
+    width: 100%;
+    color: white;
+    height: 10%;
+    padding-top: 1%;
+}
+span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn.btn-success{
+
 }
