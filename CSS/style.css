@@ -1,3 +1,15 @@
+
+@font-face {
+    font-family: 'poiret_oneregular';
+    src: url('../font/poiretone-regular-webfont.woff2') format('woff2'),
+         url('../font/poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 html{
     height: 100%;
 }
@@ -13,7 +25,9 @@ div#home {
 }
 
 div#image{
-    width: 30%;
+height: 300px;
+text-align: center;
+
 }
 
 button#button{
@@ -23,6 +37,7 @@ button#button{
 
 body{
     background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    height: 100%;
 }
 
 p.hometext{
@@ -49,10 +64,13 @@ width: 50px;
 
 img.logo{
     height: auto;
-    width: 100%;
+    width: 30%;
     margin-bottom: 10%;
     margin-top: 5%;
     margin-left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 div{
     text-align: center;
@@ -100,9 +118,7 @@ p{
 img {
     height: 100%;
     width: 20%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    float: left;
+    margin-left: 20%;
 }
 
 .container{
@@ -193,7 +209,6 @@ input{
 }
 
 div.cookies{
-    display: inline-block;
     background-color: #00000070;
     bottom: 0%;
     position: absolute;
@@ -208,4 +223,66 @@ span{
 }
 .btn.btn-success{
 
+}
+
+/* header */
+
+header {
+    background: linear-gradient(114deg, #8db7d7, #9e90c1);
+}
+
+.header-logo{
+    height: auto;
+    width: 10%;
+    float: left;
+    margin-left: 0%;
+}
+
+.navbar {
+    display: block;
+    padding-right: 15px;
+ }
+
+.navbar ul {
+    text-align: right;
+    margin-top: 10px;
+    
+}
+
+.navbar ul li {
+display: inline-block;
+position: relative;
+
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 5px 20px;
+    background-color: none;
+    color: rgb(66, 65, 65);
+    text-transform: capitalize;
+    transition: .2s ease all;
+    cursor: pointer;
+    border-radius: 50px;
+    border-color: black;
+    border: 1px solid;
+    border-right: 10%;
+    margin-right: 40px;
+    font-family: 'poiret_oneregular';
+    
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    text-decoration-line: none;
+}
+
+.navbar img {
+    height: auto;
+    width: 50px;
+    border: none;
+}
+li.profil{
+    width:5%;
+    margin-right: 40px;
 }
