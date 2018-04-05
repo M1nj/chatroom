@@ -13,7 +13,9 @@ div#home {
 }
 
 div#image{
-    width: 30%;
+height: 300px;
+text-align: center;
+
 }
 
 button#button{
@@ -23,6 +25,7 @@ button#button{
 
 body{
     background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    height: 100%;
 }
 
 p.hometext{
@@ -49,10 +52,12 @@ width: 50px;
 
 img.logo{
     height: auto;
-    width: 100%;
     margin-bottom: 10%;
     margin-top: 5%;
     margin-left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 div{
     text-align: center;
@@ -102,7 +107,6 @@ img {
     height: 100%;
     width: 20%;
     margin-left: 20%;
-    float: left;
 }
 
 .container{
@@ -196,7 +200,6 @@ input{
 }
 
 div.cookies{
-    display: inline-block;
     background-color: #00000070;
     bottom: 0%;
     position: absolute;

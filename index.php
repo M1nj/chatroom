@@ -46,9 +46,10 @@
     ?>
 
 <body>
-    <div id="image"class="container-fluid">
+    <div id="image">
         <img class="logo" src="IMG/logo.png">
 </div>
+</br>
   <div id="home" class="container-fluid">
       <p class="hometext">Already a member?</p>
       <a href="#"><button type="button" id="button" class="btn btn-primary" onclick="test()" >Sign in</button></a>
