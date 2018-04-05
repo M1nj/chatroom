@@ -16,7 +16,7 @@ button#button{
     width: 10%;
 }
 
-body.fond, body.swal2-shown, body{
+body{
     background: linear-gradient(114deg, #8db7d7, #9e90c1);
 }
 
@@ -60,18 +60,27 @@ button.btn.btn-secondary{
     border-radius: 50px;
     width: 50px;
     }
-
 button#valid_button{
-    background-color: green;
-    color: white;
-    border-color: white;
+    background-color: white;
+    color: black;
+    border-color: black;
     border-width: 2%;
     border-radius: 50px;
     margin-left: 5%;
     width: 30%;
 }
 
-button#cancel_button{
+button#valid_button:hover{
+    background-color: green;
+    color: white;
+    border-color: green;
+    border-width: 2%;
+    border-radius: 50px;
+    margin-left: 5%;
+    width: 30%;
+}
+
+button#cancel_button:hover{
     background-color: maroon;
     color: white;
     border-color: white;
