@@ -109,30 +109,29 @@
 </p>
     <div class="container">
     <h1 class="title">Welcome !</h1>
+    <p>Fill in the form to be part of our community<p>
         <form class="form register" method="post" action="register.php">
-        <p>Fill in the form to be part of our community<p>
   <div class="form-group">
     <input type="text" class="form-control" name="nickname" placeholder="Pick your nickname">
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" name="mail"aria-describedby="emailHelp" placeholder="Your email">
+    <input type="email" class="form-control" id="exampleInputEmail" name="mail"aria-describedby="emailHelp" placeholder="Your email">
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" name="password"id="exampleInputPassword1" placeholder="Your password">
+    <input type="password" class="form-control" name="password"id="exampleInputPassword" placeholder="Your password">
   </div>
   <div class="form-group">
-    <input type="confirmpassword" class="form-control" name="confirmpassword"id="exampleInputPassword1" placeholder="Confirm your password">
+    <input type="confirmpassword" class="form-control" name="confirmpassword"id="exampleInputConfirmPassword" placeholder="Confirm your password">
   </div>
   <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">By submitting your profile details, you agree to our terms and conditions.</label>
+    <input type="checkbox" class="form-check-input" id="exampleCheck">
+    <label class="form-check-label" for="exampleCheck">By submitting your profile details, you agree to our terms and conditions.</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div class="container">
     <a href="index.php"><button class="btn btn-warning">Back to the homepage</button></a>
 </div>
-<?php echo $error ?>
     </form>
 </div>
     

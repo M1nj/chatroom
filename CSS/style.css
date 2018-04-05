@@ -89,7 +89,20 @@ button#valid_button:hover{
 .title{
     font-size: 40px;
     font-family: sans-serif;
+    float: left;
     color: white;
+    padding-top: 15%;
+}
+
+p{
+    color: white; 
+}
+
+img {
+    height: 100%;
+    width: 20%;
+    margin-left: 20%;
+    float: left;
 }
 
 .container{
@@ -122,9 +135,15 @@ button#valid_button:hover{
     height: 30px;
 }
 
+.form-control::placeholder{
+    color: white;
+    opacity: 1;
+}
+
 .form-control{
     border:none;
     background: none;
+    color: white;
 }
 
 
@@ -133,7 +152,7 @@ button#valid_button:hover{
 }
 
 .btn-primary{
-    background-color: white; 
+    background-color: #ffffff; 
     border-color:black; 
     width: 80px;
     margin: 20px;
@@ -143,7 +162,7 @@ button#valid_button:hover{
 }
 
 .btn-primary:hover{
-    background-color: green;
+    background-color: blueviolet;
     color: white;
     border-color: white;
 }
@@ -176,16 +195,6 @@ input{
     width: 20%;
 }
 
-
-img {
-    height: auto;
-    width: 20%;
-    margin-left: 20%;
-}
-
-p{
-    color: white;
-}
 div.cookies{
     display: inline-block;
     background-color: #00000070;
