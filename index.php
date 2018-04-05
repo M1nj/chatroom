@@ -27,12 +27,12 @@
         
         if (!$resultat)
         {
-            /*echo '<script>swal({
+            echo '<script>swal({
                 type: "error",
                 title: "Error",
                 text: "The nickname or the password is incorrect, please try again.",
                 footer: "<a href>Forgot my password</a>",
-              })</script>';*/
+              })</script>';
         }
         else
         {
@@ -45,7 +45,7 @@
     }
     ?>
 
-<body class="fond">
+<body>
     <div class="container-fluid">
         <img class="logo" src="IMG/logo.png">
 </div>
@@ -66,7 +66,7 @@ swal({
   title: 'Welcome back',
   html:
     '<form method="post"><input type= "nickname" id="swal-input1" class="swal2-input" name="nickname" placeholder="Guillaume">' +
-    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<button id="cancel_button" class="btn btn-secondary">Cancel</button>'+'<button type="submit" id="valid_button" class="btn btn-primary">Log in</button>'+'</form>',
+    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<button type="submit" id="valid_button" class="btn btn-primary">Log in</button>'+'</form>',
     showConfirmButton: false,
 })
 }

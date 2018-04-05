@@ -103,12 +103,12 @@
 
 
 <!DOCTYPE html>
-
 <div class="container">
     <a href="index.php"><button class="btn btn-warning">Back to the homepage</button></a>
 </div>
 
     <div class="container">
+    <h1 class="title">Welcome back</h1>
         <form class="form register" method="post" action="register.php">
   <div class="form-group">
     <label for="exampleInputEmail1">Nickname</label>
@@ -125,7 +125,7 @@
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">By submitting your profile details, you agree to our terms and conditions.</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

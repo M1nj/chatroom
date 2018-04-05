@@ -16,7 +16,7 @@ button#button{
     width: 10%;
 }
 
-body.fond{
+body.fond, body.swal2-shown, body{
     background: linear-gradient(114deg, #8db7d7, #9e90c1);
 }
 
@@ -106,7 +106,11 @@ button#cancel_button{
     color: black;
     font-size: 10px;
     height: 30px;
+}
 
+.form-control{
+    border:none;
+    
 }
 
 .btn-primary{
