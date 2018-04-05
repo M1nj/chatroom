@@ -57,6 +57,9 @@
       <p class="hometext">Want to be part of the community?</p>
       <a href="register.php"><button type="button" id="button" class="btn btn-secondary" href="register.php">Sign Up</button></a>
   </div>
+  <div class="cookies">
+Lorem ipsum
+  </div>
 </body>
 
 <script> 

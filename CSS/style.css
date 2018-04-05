@@ -1,15 +1,16 @@
 html{
-    height: 100%;
+    height: auto;
 }
 div#home:first-child {
     text-align: center;
     vertical-align: middle;
     margin-top: 40%;
+    margin-bottom: 30px;
 }
 div#home {
     text-align: center;
     vertical-align: middle;
-    margin-bottom: 30px;
+   
 }
 button#button{
     margin: 1%;
@@ -179,4 +180,10 @@ img {
 
 p{
     color: white;
+}
+div.cookies{
+    background-color: #00000070;
+    top: 0%;
+    bottom: auto;
+    float: inherit;
 }
