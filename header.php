@@ -22,7 +22,7 @@
 <nav class="navbar">
     <ul>
         <li><a href="">My Chatrooms</a></li>
-        <li><a href="index.php">Log Out</a></li> 
+        <li><a href="logout.php">Log Out</a></li> 
         <a href="profile.php"><li class="profil"><img src="IMG/profile-10.png"></li></a>
     </ul>
 </nav>
