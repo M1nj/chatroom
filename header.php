@@ -28,7 +28,7 @@
         <li><img src="IMG/search-02.png" alt=""><input type="search" placeholder="ex: Tokyo, Kitten, Design, ..." name="the_search"></li>
         </form>
     </div>  
-        <li><a href="">My Chatrooms</a></li>
+        <li><a href="mychatroom.php">My Chatrooms</a></li>
         <li><a href="logout.php">Log Out</a></li> 
         <a href="profile.php"><li class="profil"><img src="IMG/profile-10.png"></li></a>
     </ul>

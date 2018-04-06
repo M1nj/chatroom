@@ -18,20 +18,8 @@ $movies = $stmt->fetchAll();
 
 <body>
 <?php
-include 'layout/header.php';
+include 'header.php';
 ?>
 
-<div class="posters">
-<?php
-    foreach($movies as $movie){ ?>
 
-        <a class="poster" href="detail.php?id=<?php echo $movie['id']; ?>">
-            <img src="posters/<?php echo $movie["imdbId"]; ?>.jpg " alt="">
-        </a>
-
-    <?php } ?>
-</div>
-
-</body>
-<?php include 'layout/footer.php';?>
 </html>
