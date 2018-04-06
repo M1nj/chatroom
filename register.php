@@ -34,7 +34,7 @@
       //traiter le form
     if (!empty($_POST)){
             $nickname = $_POST["nickname"];
-            $password = $_POST["password"];
+            $password = password_hash ($_POST["password"],PASSWORD_DEFAULT);
             $mail = $_POST["mail"];
     
             // Doublon pseudo 
@@ -109,7 +109,7 @@
                     ":mail" =>$mail,
                 ]);
                 $_SESSION["isConnected"]= true;
-                echo 'success';
+                header ('location: chatroom.php');
     
                 //afficher un message de succès
                 //redirige
@@ -119,10 +119,9 @@
 
 
 <!DOCTYPE html>
-<p>
+
 <br />
     <img class="logo_cc" src="IMG/logo.png" alt="LogoChitChat" />
-</p>
     <div class="container">
     <h1 class="title">Welcome !</h1>
     <p>Fill in the form to be part of our community<p> 
@@ -143,12 +142,14 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck">
     <label class="form-check-label" for="exampleCheck">By submitting your profile details, you agree to our terms and conditions.</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<div class="container">
+  <br>
+  <div class="container">
+    <button type="submit" class="btn btn-primary">Submit</button>
     <a href="index.php"><button class="btn btn-warning">Back to the homepage</button></a>
 </div>
-    </form>
+</form>
+
+
 </div>
     
     </body>
