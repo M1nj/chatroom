@@ -40,6 +40,10 @@ body{
     height: 100%;
 }
 
+body#body{
+    background: white;
+}
+
 p.hometext{
     color: white;
     margin-bottom: 10px;
@@ -51,7 +55,7 @@ background-color: #00000000;
 border-color: white;
 border-width: 2%;
 border-radius: 50px;
-width: 90px;
+width: 50px;
 }
 button.btn.btn-secondary:first-child{
 background-color: #ffffff;
@@ -119,9 +123,9 @@ img {
 }
 
 img.logo_cc {
-    height: 25%;
+    height: 30%;
     width: auto;
-    margin-left: 20%;
+    margin-left: 30%;
 }
 
 
@@ -171,16 +175,17 @@ img.logo_cc {
 }
 
 .btn-primary{
-    background-color: #00000000;
-    border-color: white;
-    border-width: 2%;
-    border-radius: 50px;
+    background-color: #ffffff; 
+    border-color:black; 
     width: 80px;
+    margin: 20px;
+    border-radius: 50px;
     margin-right: 40px;
+    color: black;
 }
 
 .btn-primary:hover{
-    background-color: lightgrey;
+    background-color: blueviolet;
     color: white;
     border-color: white;
 }
@@ -191,21 +196,24 @@ input{
 }
 
 .btn-warning{
-    background-color: #00000000;
-    border-color: white;
+    background-color: white;
+    color: black;
+    border-color: black;
     border-width: 2%;
     border-radius: 50px;
-    width: 210px;
-    margin-right: 40px;
+    margin-right: 50px;
+    width: 20%;
+    font-size: 10px;
 }
 
+
 .btn-warning:hover{
-    background-color: lightgrey;
+    background-color: grey;
     color: white;
     border-color: white;
     border-width: 2%;
     border-radius: 50px;
-    width: 210px;
+    width: 20%;
 }
 
 div.cookies{
@@ -221,7 +229,6 @@ span{
     display: inline-block;
     vertical-align: middle;
 }
-
 
 /* header */
 
@@ -262,7 +269,7 @@ position: relative;
     transition: .2s ease all;
     cursor: pointer;
     border-radius: 50px;
-    border-color: rgb(66, 65, 65);
+    border-color: black;
     border: 1px solid;
     border-right: 10%;
     margin-right: 40px;
@@ -285,44 +292,57 @@ li.profil{
     margin-right: 40px;
 }
 
-.search {
-    display: inline-block;
+.search { 
+    display: inline-block; 
+} 
+ 
+.search input { 
+    margin: 10px; 
+    padding: 10px; 
+    padding-bottom: 5px; 
+    width: 400px; 
+    height: 36px; 
+    background-color: transparent; 
+    color:rgb(66, 65, 65); 
+    border: 1px solid; 
+    outline: none; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    margin-right: 40px; 
+    transition: .2s ease all; 
+    font-family: 'poiret_oneregular'; 
+    padding: 10px 20px 10px; 
+} 
+ 
+.search input:focus { 
+    border: 2px solid rgba(136, 76, 233, 0.407); 
+     
+} 
+ 
+.search img { 
+    height: 36px; 
+    width: auto; 
+    border: none; 
+    display: inline-block; 
+    margin-left:0px;  
+} 
+ 
+ 
+ 
+ 
+/* chatroom */ 
+ input#send{
+     width:15%;
+ }
+ input#message{
+    width:45%;
 }
-
-.search input {
-    margin: 10px;
-    padding: 10px;
-    padding-bottom: 5px;
-    width: 400px;
-    height: 36px;
-    background-color: transparent;
-    color:rgb(66, 65, 65);
-    border: 1px solid;
-    outline: none;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-right: 40px;
-    transition: .2s ease all;
-    font-family: 'poiret_oneregular';
-    padding: 10px 20px 10px;
+div.user_inputs{
+    background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    bottom: 0%;
+    position: absolute;
+    width: 100%;
+    color: white;
+    height: 10%;
+    padding-top: 1%;
 }
-
-.search input:focus {
-    border: 2px solid rgba(136, 76, 233, 0.407);
-    
-}
-
-.search img {
-    height: 36px;
-    width: auto;
-    border: none;
-    display: inline-block;
-    margin-left:0px; 
-}
-
-
-
-
-/* chatroom */
-
-

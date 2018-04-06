@@ -28,7 +28,6 @@
     // Hachage du mot de passe
     // $pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
     if (!empty($_POST)){
-        $hash = "SELECT password FROM user_base";
         $nickname = $_POST["nickname"];
         $password = $_POST["password"];
         
@@ -98,6 +97,11 @@ swal({
 })
 }
  </script>
+
+ <script src="Public/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:3000');
+        </script>
 
  
 

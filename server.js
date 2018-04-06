@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
   user     : 'root',
   password : 'root',
   database : 'chatroom',
-  port     : 8888
+  port     : 8889,
 });
 
 //on se connecte tout de suite
@@ -29,17 +29,18 @@ io.on("connection", function(socket){
 
     //envoie un message de type "welcome" à la personne qui vient de connecter 
     //aucune donnée n'est passée en plus
-    socket.emit("welcome");
+    //socket.emit("welcome");
 
     //quand on reçoit un message de type "chat_message"...
-    socket.on("chat_message", function(data){
+    socket.on("message", function(data){
+        console.log(data);
         //accède aux éventuelles données de session
-        console.log(socket.request.session);
-
         //on devrait sauvegarder en bdd
-
+        connection.query('INSERT INTO message_base VALUES (NULL, ?, ?, ? , ?)', [data.date, data.content, data.nickname, 0], function(error, results, fields){
+            //io.broadcast.emit("message", data);
+        });
         //on rebalance ce message à tout le monde
-        io.emit("chat_message", data);
+        
     })
 
 })
@@ -48,3 +49,5 @@ io.on("connection", function(socket){
 http.listen(3000, function(){
     console.log("serveur démarré sur le port 3000 !");
 });
+
+
