@@ -21,6 +21,13 @@
 <a href="index.php"><img class="header-logo" src="IMG/logo.png"alt=""></a>
 <nav class="navbar">
     <ul>
+
+    <div class="search">
+    
+        <form action="search.php">   
+        <li><img src="IMG/search-02.png" alt=""><input type="search" placeholder="ex: Tokyo, Kitten, Design, ..." name="the_search"></li>
+        </form>
+    </div>  
         <li><a href="">My Chatrooms</a></li>
         <li><a href="logout.php">Log Out</a></li> 
         <a href="profile.php"><li class="profil"><img src="IMG/profile-10.png"></li></a>

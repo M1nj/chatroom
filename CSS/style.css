@@ -268,7 +268,7 @@ position: relative;
     transition: .2s ease all;
     cursor: pointer;
     border-radius: 50px;
-    border-color: black;
+    border-color: rgb(66, 65, 65);
     border: 1px solid;
     border-right: 10%;
     margin-right: 40px;
@@ -290,3 +290,45 @@ li.profil{
     width:5%;
     margin-right: 40px;
 }
+
+.search {
+    display: inline-block;
+}
+
+.search input {
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 5px;
+    width: 400px;
+    height: 36px;
+    background-color: transparent;
+    color:rgb(66, 65, 65);
+    border: 1px solid;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-right: 40px;
+    transition: .2s ease all;
+    font-family: 'poiret_oneregular';
+    padding: 10px 20px 10px;
+}
+
+.search input:focus {
+    border: 2px solid rgba(136, 76, 233, 0.407);
+    
+}
+
+.search img {
+    height: 36px;
+    width: auto;
+    border: none;
+    display: inline-block;
+    margin-left:0px; 
+}
+
+
+
+
+/* chatroom */
+
+
