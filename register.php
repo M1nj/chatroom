@@ -34,7 +34,7 @@
       //traiter le form
     if (!empty($_POST)){
             $nickname = $_POST["nickname"];
-            $password = $_POST["password"];
+            $password = password_hash ($_POST["password"],PASSWORD_DEFAULT);
             $mail = $_POST["mail"];
     
             // Doublon pseudo 
@@ -109,7 +109,7 @@
                     ":mail" =>$mail,
                 ]);
                 $_SESSION["isConnected"]= true;
-                echo 'success';
+                header ('location: chatroom.php');
     
                 //afficher un message de succès
                 //redirige

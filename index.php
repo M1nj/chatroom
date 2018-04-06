@@ -28,6 +28,7 @@
     // Hachage du mot de passe
     // $pass_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
     if (!empty($_POST)){
+        $hash = "SELECT password FROM user_base";
         $nickname = $_POST["nickname"];
         $password = $_POST["password"];
         
@@ -40,7 +41,9 @@
 
         $resultat = $stmt->fetch();
 
-       
+        //if (isset($_POST['remember'])){
+           // setcookie('user_id', $resultat-> id, time()+3600*24*2);
+        //}
         
         if (!$resultat)
         {
@@ -51,13 +54,14 @@
                 footer: "<a href>Forgot my password</a>",
               })</script>';
         }
+
         else
         {
             $_SESSION['nickname'] = $nickname;
             $_SESSION['password'] = $password;
             //$_SESSION['id'] = $resultat['id'];
             $_SESSION["isConnected"]= true;
-            header ('location: chatroom.php');;
+            header ('location: chatroom.php');
         }
     }
     ?>
@@ -89,7 +93,7 @@ swal({
   title: 'Welcome back',
   html:
     '<form method="post"><input type= "nickname" id="swal-input1" class="swal2-input" name="nickname" placeholder="Guillaume">' +
-    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<button type="submit" id="valid_button" class="btn btn-primary">Log in</button>'+'</form>',
+    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<input type="checkbox" id="swal-input3" name="remember"><label class="form-check-label" for="remember">Remember me</label>'+'<button type="submit" id="valid_button" class="btn btn-primary">Log in</button>'+'</form>',
     showConfirmButton: false,
 })
 }
