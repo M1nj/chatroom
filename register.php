@@ -120,7 +120,6 @@
 
 <!DOCTYPE html>
 
-<br />
     <img class="logo_cc" src="IMG/logo.png" alt="LogoChitChat" />
     <div class="container">
     <h1 class="title">Welcome !</h1>
