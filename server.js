@@ -39,6 +39,8 @@ io.on("connection", function(socket){
         connection.query('INSERT INTO message_base VALUES (NULL, ?, ?, ? , ?)', [data.date, data.content, data.nickname, data.id_chatroom], function(error, results, fields){
             //io.broadcast.emit("message", data);
         });
+
+        io.emit("message", data);
         //on rebalance ce message à tout le monde
         
     })

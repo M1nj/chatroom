@@ -3,7 +3,7 @@
     session_start();
 ?>
 <body id="body">
-    <div class="chats">
+    <div id="chats">
 
     </div>
     <div class="user_inputs">
@@ -22,7 +22,11 @@
     $('#send').click(function(){
         socket.emit('message',{content: $('#message').val(), nickname: '<?PHP echo $_SESSION['nickname'] ?>', date: new Date(), id_chatroom: '<?PHP echo $_GET['id'] ?>'});
         console.log("Hello");
-    })
+    });
+
+    socket.on("message", function(data){
+            $("#chats").append(data.nickname, ':', data.content,"</br>");
+        });
 </script>
 
 </body>
