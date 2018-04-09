@@ -57,11 +57,11 @@
         else
         {
             $_SESSION['nickname'] = $nickname;
-            $_SESSION['password'] = $password;
+            $_SESSION['password'] = password_verify($password,$resultat['password']);
             $_SESSION['mail'] = $resultat['mail'];
             //$_SESSION['id'] = $resultat['id'];
             $_SESSION["isConnected"]= true;
-            header ('location: chatroom.php');
+            header ('location: mychatroom.php');
         }
     }
     ?>

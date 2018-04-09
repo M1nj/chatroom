@@ -36,6 +36,9 @@
             $nickname = $_POST["nickname"];
             $password = password_hash ($_POST["password"],PASSWORD_DEFAULT);
             $mail = $_POST["mail"];
+            $picture = $_FILES['upload_picture']['name'];
+            $maxsize = 10485760;
+            
     
             // Doublon pseudo 
             $sql = "SELECT * FROM user_base
@@ -89,7 +92,6 @@
                          $error = 'Please insert a valid email address';
             }
 
-    
             //si les données sont valides
             if ($error == ""){
                 //ajout dans la bdd
@@ -100,16 +102,25 @@
                 */
                 $sql = "INSERT INTO user_base 
                         VALUES (NULL, :nickname, :mail, 
-                        :password,0, 0)";
+                        :password,:upload_picture, 0)";
     
                 $stmt = $dbh->prepare($sql);
                 $stmt -> execute([
                     ":nickname" => $nickname,
                     ":password" => $password, 
                     ":mail" =>$mail,
+                    ":upload_picture" => $picture
                 ]);
                 $_SESSION["isConnected"]= true;
                 $_SESSION['mail'] = $mail;
+                $_SESSION['nickname'] = $nickname;
+                $_SESSION['mail'] = $mail;
+                chmod("profile_pictures/",0750);
+                //$filename = $picture;
+                //$ext = pathinfo($filename, PATHINFO_EXTENSION);
+               // $newfilename = ''.rand(0,1000).'.'.$ext.'';
+                //$rename = rename('profile_pictures/'.$filename, 'profile_pictures/'.$newfilename);
+                move_uploaded_file($_FILES['upload_picture']['tmp_name'],"profile_pictures/".$picture);
                 header ('location: chatroom.php');
     
                 //afficher un message de succès
@@ -125,7 +136,7 @@
     <div class="container">
     <h1 class="title">Welcome !</h1>
     <p>Fill in the form to be part of our community<p> 
-        <form class="form register" method="post" action="register.php">
+        <form class="form register" method="post" action="register.php" enctype="multipart/form-data">
   <div class="form-group">
     <input type="text" class="form-control" name="nickname" placeholder="Pick your nickname">
   </div>
@@ -137,6 +148,10 @@
   </div>
   <div class="form-group">
     <input type="confirmpassword" class="form-control" name="confirmpassword"id="exampleInputConfirmPassword" placeholder="Confirm your password">
+  </div>
+  <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+  <div class="form-group">
+    <input type="file" name="upload_picture" id="upload_picture">
   </div>
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck">
@@ -154,5 +169,6 @@
     
     </body>
 </html>
+
 
 
