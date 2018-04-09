@@ -20,7 +20,7 @@
 <script>
     console.log("Hello");
     $('#send').click(function(){
-        socket.emit('message',{content: $('#message').val(), nickname: '<?PHP echo $_SESSION['nickname'] ?>', date: new Date() });
+        socket.emit('message',{content: $('#message').val(), nickname: '<?PHP echo $_SESSION['nickname'] ?>', date: new Date(), id_chatroom: '<?PHP echo $_GET['id'] ?>'});
         console.log("Hello");
     })
 </script>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  lun. 09 avr. 2018 à 08:07
+-- Généré le :  lun. 09 avr. 2018 à 12:35
 -- Version du serveur :  5.6.38
 -- Version de PHP :  7.2.1
 
@@ -21,29 +21,42 @@ SET time_zone = "+00:00";
 --
 
 --
+-- Déchargement des données de la table `chatroom_base`
+--
+
+INSERT INTO `chatroom_base` (`id_chatroom`, `name_chatroom`, `date_create`, `id_creator`, `nom_theme`) VALUES
+(6, 'Test', '2018-04-09', 0, 'Design'),
+(7, 'Test 2', '2018-04-09', 0, 'Animals');
+
+--
+-- Déchargement des données de la table `message_base`
+--
+
+INSERT INTO `message_base` (`id_message`, `date_create`, `message`, `nickname`, `id_chatroom`) VALUES
+(1, '2018-04-06', 'Raikes', '0', 0),
+(2, '2018-04-06', 'Raikes', 'TEST', 0),
+(3, '2018-04-06', 'Raikes', 'TEST', 0),
+(4, '2018-04-06', 'Hello', 'Raikes', 0),
+(5, '2018-04-06', 'Hello', 'Raikes', 0),
+(6, '2018-04-09', 'Hello', '', 0),
+(7, '2018-04-09', 'Test', '', 7);
+
+--
 -- Déchargement des données de la table `theme_base`
 --
 
-INSERT INTO `theme_base` (`id_theme`, `name_theme`, `name_chatroom`) VALUES
-(1, 'Food', '0'),
-(2, 'Cinema', '0'),
-(3, 'Animals', '0'),
-(4, 'Nature', '0'),
-(5, 'Food', '0'),
-(6, 'Literature', '0'),
-(7, 'Economy', '0'),
-(8, 'Design', '0'),
-(9, 'Beauty', '0'),
-(10, 'Travel', '0'),
-(11, 'Kitten', '0');
-
---
--- Déchargement des données de la table `user_base`
---
-
-INSERT INTO `user_base` (`id_user`, `nickname`, `mail`, `password`, `profile_picture`, `name_theme`) VALUES
-(5, 'Raikes', 'benjamincaillet14@gmail.com', 'Test', '0', '0'),
-(6, 'Sylvain', 'sylvain.pete@yahoo.fr', 'Test', '0', '0');
+INSERT INTO `theme_base` (`id_theme`, `name_theme`) VALUES
+(1, 'Music'),
+(2, 'Cinema'),
+(3, 'Animals'),
+(4, 'Nature'),
+(5, 'Food'),
+(6, 'Literature'),
+(7, 'Economy'),
+(8, 'Design'),
+(9, 'Beauty'),
+(10, 'Travel'),
+(11, 'Kitten');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

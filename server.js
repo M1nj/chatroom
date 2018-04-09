@@ -36,7 +36,7 @@ io.on("connection", function(socket){
         console.log(data);
         //accède aux éventuelles données de session
         //on devrait sauvegarder en bdd
-        connection.query('INSERT INTO message_base VALUES (NULL, ?, ?, ? , ?)', [data.date, data.content, data.nickname, 0], function(error, results, fields){
+        connection.query('INSERT INTO message_base VALUES (NULL, ?, ?, ? , ?)', [data.date, data.content, data.nickname, data.id_chatroom], function(error, results, fields){
             //io.broadcast.emit("message", data);
         });
         //on rebalance ce message à tout le monde
