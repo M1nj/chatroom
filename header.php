@@ -18,7 +18,7 @@
 
 
 <header class="header">
-<a href="index.php"><img class="header-logo" src="IMG/logo.png"alt=""></a>
+    <a href="index.php"><img class="header-logo" src="IMG/logo.png"alt=""></a>
 <nav class="navbar">
     <ul>
 

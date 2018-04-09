@@ -182,14 +182,14 @@ img.logo_cc {
     border-radius: 50px;
     margin-right: 40px;
     color: black;
-    width: 80px;
     margin-right: 20px;
 }
 
 .btn-primary:hover{
-    background-color: blueviolet;
+    background-color: grey;
     color: white;
     border-color: white;
+    border-width: 2%;
 }
 
 input{
@@ -326,9 +326,7 @@ li.profil{
     display: inline-block; 
     margin-left:0px;  
 } 
- 
- 
- 
+
  
 /* chatroom */ 
  input#send{
@@ -345,4 +343,13 @@ div.user_inputs{
     color: white;
     height: 10%;
     padding-top: 1%;
+}
+
+.form-control-chatroom{
+font-family: 'poiret_oneregular';
+    font-size: 15px;
+}
+
+.form-control-chatroom:placeholder{
+    color:black;
 }
