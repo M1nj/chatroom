@@ -22,9 +22,7 @@
     <a href="chatroom.php"><img class="header-logo" src="IMG/logo.png"alt=""></a>
 <nav class="navbar">
     <ul>
-
     <div class="search">
-    
         <form action="search.php">   
         <li><img src="IMG/search-02.png" alt=""><input type="search" placeholder="ex: Tokyo, Kitten, Design, ..." name="the_search"></li>
         </form>

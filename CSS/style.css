@@ -257,9 +257,8 @@ margin-top: 10px;
 }
 
 .navbar ul li {
-display: inline-block;
-position: relative;
-
+    display: inline-block;
+    position: relative;
 }
 
 .navbar ul li a {
