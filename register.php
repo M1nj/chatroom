@@ -109,6 +109,7 @@
                     ":mail" =>$mail,
                 ]);
                 $_SESSION["isConnected"]= true;
+                $_SESSION['mail'] = $mail;
                 header ('location: chatroom.php');
     
                 //afficher un message de succès

@@ -15,6 +15,7 @@
         $nickname = $_POST["nickname"];
         $password = $_POST["password"];
         
+        
         // Vérification des identifiants
         $sql = "SELECT * FROM user_base WHERE nickname = :nickname AND password = :password";
         $stmt = $dbh -> prepare($sql);
@@ -23,8 +24,7 @@
         $stmt -> execute([":nickname" => $nickname, ":password" => $password,]);
 
         $resultat = $stmt->fetch();
-
-       
+    
         
         if (!$resultat)
         {
@@ -34,6 +34,7 @@
         {
             $_SESSION['nickname'] = $nickname;
             $_SESSION['password'] = $password;
+            $_SESSION['mail'] = $resultat['mail'];
             //$_SESSION['id'] = $resultat['id'];
             $_SESSION["isConnected"]= true;
         }

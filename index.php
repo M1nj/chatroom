@@ -58,6 +58,7 @@
         {
             $_SESSION['nickname'] = $nickname;
             $_SESSION['password'] = $password;
+            $_SESSION['mail'] = $resultat['mail'];
             //$_SESSION['id'] = $resultat['id'];
             $_SESSION["isConnected"]= true;
             header ('location: chatroom.php');

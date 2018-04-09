@@ -353,3 +353,13 @@ font-family: 'poiret_oneregular';
 .form-control-chatroom:placeholder{
     color:black;
 }
+
+
+/* page profile */
+
+.profile-pic img {
+    float: right;
+    width: 200px;
+    
+
+}
