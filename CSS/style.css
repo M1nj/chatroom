@@ -346,10 +346,42 @@ div.user_inputs{
 }
 
 .form-control-chatroom{
-font-family: 'poiret_oneregular';
+    font-family: 'poiret_oneregular';
     font-size: 15px;
 }
 
 .form-control-chatroom:placeholder{
     color:black;
+}
+
+h1{
+    font-family:'poiret_oneregular';
+    font-size: 40px; 
+    padding-left: 10px;
+    margin: 30px;
+}
+
+h2{
+    font-family:'poiret_oneregular';
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    margin: 40px;
+}
+
+.btn-create{
+    font-family: 'poiret_oneregular';
+    background-color: #fc6a6a00;
+    border-color: grey;
+    border-width: 2%;
+    border-radius: 50px;
+    width: 80px;
+    margin-left: 60px;
+}
+
+.btn-create:hover{
+    background-color: grey;
+    color: white;
+    border-color: white;
+    border-width: 2%;
 }
