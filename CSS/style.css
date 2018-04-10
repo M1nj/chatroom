@@ -281,8 +281,6 @@ vertical-align: middle;
 
 header {
 background: linear-gradient(114deg, #8db7d7, #9e90c1);
-position: absolute;
-top: 0;
 }
 
 .header-logo{
