@@ -131,7 +131,7 @@
     <img class="logo_cc" src="IMG/logo.png" alt="LogoChitChat" />
     <div class="container">
     <h1 class="title">Welcome !</h1>
-    <p>Fill in the form to be part of our community<p> 
+    <h3>Fill in the form to be part of our community<h3> 
         <form class="form register" method="post" action="register.php" enctype="multipart/form-data">
   <div class="form-group">
     <input type="text" class="form-control" name="nickname" placeholder="Pick your nickname">
