@@ -21,9 +21,10 @@
 
     ini_set("display_errors",1);
     include("db.php");
-
-
-
+            
+    $stmt = $dbh -> prepare($sql);
+    $stmt -> execute([":id" => $id]);
+    $titles = $stmt -> fetchAll();   
 
     //var_dump($movie);        
 
@@ -39,6 +40,11 @@
             $picture = $_FILES['upload_picture']['name'];
             $maxsize = 10485760;
             
+            $sql = "SELECT * FROM user_base";
+
+            $stmt = $dbh -> prepare($sql);
+            $stmt -> execute(); //on la remplace ensuite dans $id.
+            $users = $stmt -> fetchAll();
     
             // Doublon pseudo 
             $sql = "SELECT * FROM user_base
@@ -115,12 +121,13 @@
                 $_SESSION['mail'] = $mail;
                 $_SESSION['nickname'] = $nickname;
                 $_SESSION['mail'] = $mail;
+                
                 chmod("profile_pictures/",0750);
                 $filename = $picture;
                 $ext = pathinfo($filename, PATHINFO_EXTENSION);
                 move_uploaded_file($_FILES['upload_picture']['tmp_name'],"profile_pictures/".$picture);
                 rename("profile_pictures/".$picture,"profile_pictures/".rand(1,100).".".$ext);
-                header ('location: chatroom.php');
+                header ('location: mychatroom.php');
             }
 
 ?>

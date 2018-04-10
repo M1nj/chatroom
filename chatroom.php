@@ -3,6 +3,7 @@
     session_start();
     ini_set("display_errors", 1);
     include("db.php");
+   
     $id = $_GET['id'];
         
     $sql ="SELECT * FROM chatroom_base
@@ -20,6 +21,21 @@
         ?>
 
         <div id="chats">
+        <?php
+
+            $sql = "SELECT * FROM message_base ORDER BY date(date_create)";
+            $stmt = $dbh -> query($sql); //execution de la requête
+            $messages = $stmt -> fetchAll(); //récuperer toutes les lignes de la requête.
+            //var_dump($movies); //afficher les lignes
+
+                
+            foreach ($messages as $message){
+                echo '<p>';
+                echo ''.$message['nickname'].' : '.$message['message'].'';
+                echo '</p>';
+                }
+               
+        ?>
         </div>
 
         <div class="user_inputs">
