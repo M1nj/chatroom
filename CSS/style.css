@@ -406,9 +406,19 @@ color:black;
 /* page profile */
 
 .profile-pic img {
-float: right;
 width: 200px;
 }
+
+#checkbox-profile {
+    text-align: center;
+    width: 30px;
+    height: auto;
+}
+.container-profile-2, .container-profile-1{
+    width: 50%;
+}
+
+/* fin page profile */
 
 h1{
 font-family:'poiret_oneregular';
