@@ -19,8 +19,10 @@
             ":chatroom_name" => $chatroom_name,
             ":checkbox" => $theme
         ]);
+            $id=$dbh->lastInsertId();
+
+            header ("location: chatroom.php?id=".$id."");
         }
-    //$theme = $_GET['checkbox'];
 
 ?>
 
