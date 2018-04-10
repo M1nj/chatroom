@@ -34,9 +34,9 @@
  
     
         <form class="form register" method="post">
-  <div class="form-group">
-    <input type="text" class="form-control" name="nickname" placeholder="Choose a chatroom name">
-  </div>
+            <div class="form-group">
+                <input type="text" class="form-control-createchatroom" method="post" name="chatroom_name" placeholder="Choose a chatroom name">
+            </div>
   
  <?PHP 
     $sql ="SELECT name_theme FROM theme_base ORDER BY name_theme";
