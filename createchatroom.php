@@ -56,7 +56,7 @@
   <br>
   <div class="container">
   <a href="#"><button type="submit" class="btn btn-primary">Create</button></a>
-    <a href="index.php"><button class="btn btn-warning">Back to my chatrooms</button></a>
+    <a href="mychatroom.php"><button class="btn btn-warning">Back to my chatrooms</button></a>
 </div>
 </form>
 
