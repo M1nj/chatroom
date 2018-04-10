@@ -5,7 +5,6 @@
     if (!empty($_POST)){
         $chatroom_name = $_POST["chatroom_name"];
         $theme = $_POST["checkbox"];
-        $id_creator = $_SESSION();
         
         // Vérification des identifiants
         $sql = "INSERT INTO chatroom_base 
@@ -47,7 +46,7 @@
 
     echo '<div>';
     foreach ($themes as $theme){
-        echo '<input id="checkbox-profile" type="checkbox" value="'.$theme.'" name="checkbox">';
+        echo '<input id="checkbox-profile" type="radio" value="'.$theme.'" name="checkbox">';
         echo '<label class="theme-check-label">'.$theme["name_theme"].'</label>';
     }
  ?>
