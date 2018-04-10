@@ -57,7 +57,7 @@
         else
         {
             $_SESSION['nickname'] = $nickname;
-            $_SESSION['password'] = password_verify($password,$resultat['password']);
+            $_SESSION['password'] = $password;
             $_SESSION['mail'] = $resultat['mail'];
             //$_SESSION['id'] = $resultat['id'];
             $_SESSION["isConnected"]= true;
@@ -73,7 +73,7 @@
 </br>
   <div id="home" class="container-fluid">
       <p class="hometext">Already a member?</p>
-      <a href="#"><button type="button" id="button" class="btn btn-primary" onclick="test()" >Sign in</button></a>
+      <button type="button" id="button" class="btn btn-primary" onclick="test()" >Sign in</button>
       </div>
     <div id="home" class="container-fluid">
       <p class="hometext">Want to be part of the community?</p>
@@ -93,7 +93,7 @@ swal({
   title: 'Welcome back',
   html:
     '<form method="post"><input type= "nickname" id="swal-input1" class="swal2-input" name="nickname" placeholder="Guillaume">' +
-    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<input type="checkbox" id="swal-input3" name="remember"><label class="form-check-label" for="remember">Remember me</label>'+'<button type="submit" id="valid_button" class="btn btn-primary">Log in</button>'+'</form>',
+    '<input type="password" id="swal-input2" class="swal2-input" name="password" placeholder="****">'+'<input type="checkbox" id="swal-input3" name="remember"><label class="form-check-label" for="remember">Remember me</label>'+'<button type="submit" id="valid_button" class="btn btn-primary" action="createchatroom.php">Log in</button>'+'</form>',
     showConfirmButton: false,
 })
 }

@@ -34,7 +34,7 @@
       //traiter le form
     if (!empty($_POST)){
             $nickname = $_POST["nickname"];
-            $password = password_hash ($_POST["password"],PASSWORD_DEFAULT);
+            $password =$_POST["password"];
             $mail = $_POST["mail"];
             $picture = $_FILES['upload_picture']['name'];
             $maxsize = 10485760;
@@ -116,15 +116,11 @@
                 $_SESSION['nickname'] = $nickname;
                 $_SESSION['mail'] = $mail;
                 chmod("profile_pictures/",0750);
-                //$filename = $picture;
-                //$ext = pathinfo($filename, PATHINFO_EXTENSION);
-               // $newfilename = ''.rand(0,1000).'.'.$ext.'';
-                //$rename = rename('profile_pictures/'.$filename, 'profile_pictures/'.$newfilename);
+                $filename = $picture;
+                $ext = pathinfo($filename, PATHINFO_EXTENSION);
                 move_uploaded_file($_FILES['upload_picture']['tmp_name'],"profile_pictures/".$picture);
+                rename("profile_pictures/".$picture,"profile_pictures/".rand(1,100).".".$ext);
                 header ('location: chatroom.php');
-    
-                //afficher un message de succès
-                //redirige
             }
 
 ?>
