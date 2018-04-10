@@ -7,6 +7,7 @@
     if (!empty($_POST)){
         $chatroom_name = $_POST["chatroom_name"];
         $theme = $_POST["checkbox"];
+        $id_creator = $_SESSION();
         
         // Vérification des identifiants
         $sql = "INSERT INTO chatroom_base 

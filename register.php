@@ -20,11 +20,7 @@
     session_start();
 
     ini_set("display_errors",1);
-    include("db.php");
-            
-    $stmt = $dbh -> prepare($sql);
-    $stmt -> execute([":id" => $id]);
-    $titles = $stmt -> fetchAll();   
+    include("db.php"); 
 
     //var_dump($movie);        
 
