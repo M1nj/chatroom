@@ -42,7 +42,10 @@ body#body{
 background: white;
 }
 
+/* home avec sign in et sign up */
+
 p.hometext{
+font-family: 'poiret_oneregular';
 color: white;
 margin-bottom: 10px;
 text-align: left;
@@ -50,21 +53,51 @@ margin-left: 40%;
 }
 
 button.btn.btn-primary:first-child{
+font-family: 'poiret_oneregular';
 background-color: #00000000;
 border-color: white;
 border-width: 2%;
 border-radius: 50px;
-width: 50px;
+width: 80px;
 }
 
 button.btn.btn-secondary:first-child{
+font-family: 'poiret_oneregular';
 background-color: #ffffff;
 color: black;
 border-color: white;
 border-width: 2%;
 border-radius: 50px;
-
 }
+
+button.btn.btn-primary{
+color: black;
+border-color: white;
+}
+
+button.btn.btn-primary:hover{
+color: white;
+background-color: grey;
+border-color: white;
+}
+
+/* fin de la home */
+
+
+
+/* page register */ 
+
+button.btn.btn-warning{
+color: white;
+border-color: white;
+}
+    
+button.btn.btn-warning:hover{
+background-color: lightgrey;
+border-color: white;
+}
+
+/* fin page register */ 
 
 img.logo{
 height: auto;
@@ -87,6 +120,11 @@ border-width: 2%;
 border-radius: 50px;
 }
 
+button.btn.btn-secondary:hover{
+background-color: lightgrey;
+color: white;
+}
+
 button#valid_button{
 background-color: white;
 color: black;
@@ -98,7 +136,6 @@ width: 30%;
 }
 
 button#valid_button:hover{
-background-color: green;
 color: white;
 border-color: white;
 border-width: 2%;
@@ -176,10 +213,13 @@ background: transparent;
 
 
 .form-check-label{
-margin-top: 12px;
+font-size: 12px;
+color: black;
+margin-top: 14px;
 }
 
 .btn-primary{
+font-family: 'poiret_oneregular';
 background-color: #ffffff;  
 width: 80px;
 margin: 20px;
@@ -189,6 +229,7 @@ color: black;
 }
 
 .btn-primary:hover{
+font-family: 'poiret_oneregular';
 background-color: grey;
 color: white;
 border-color: white;
@@ -203,6 +244,7 @@ height: 30px;
 }
 
 .btn-warning{
+font-family: 'poiret_oneregular';
 background-color: #00000000;
 border-color: white;
 border-width: 2%;
@@ -212,6 +254,7 @@ margin-right: 40px;
 }
 
 .btn-warning:hover{
+font-family: 'poiret_oneregular';
 background-color: grey;
 color: white;
 border-color: white;
@@ -219,7 +262,6 @@ border-width: 2%;
 border-radius: 50px;
 width: 210px;
 }
-
 
 div.cookies{
 background-color: #00000070;
@@ -394,8 +436,23 @@ margin-left: 60px;
 }
 
 .btn-create:hover{
-background-color: grey;
+background-color: lightgrey;
 color: white;
 border-color: white;
 border-width: 2%;
+}
+
+/* Page Create a chatroom */
+
+.form-control-createchatroom{
+border: none;
+background: transparent;
+font-family: 'poiret_oneregular';
+font-size: 14px;
+}
+    
+.form-control-createchatroom::placeholder{
+color: black;
+font-family: 'poiret_oneregular';
+font-size: 14px;
 }
