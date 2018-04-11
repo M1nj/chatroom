@@ -1,9 +1,6 @@
 <?php
     include ('header.php');
-    session_start();
-    ini_set("display_errors", 1);
-    include("db.php");
-   
+
     $id = $_GET['id'];
         
     $sql ="SELECT * FROM chatroom_base

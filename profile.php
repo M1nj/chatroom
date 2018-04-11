@@ -1,12 +1,22 @@
 <?php
     include 'header.php';
-    include 'db.php'; 
-    session_start();
-   
-   
+    $picture = $_FILES['new_upload_picture']['name'];
+    $nickname = $_SESSION['nickname'];
 
-    //$theme = $_GET['checkbox'];
+    if(isset($picture)){
+      $sql = "INSERT INTO profile_picture FROM user_base
+              WHERE nickname = :nickname";
 
+      $stmt = $dbh -> prepare($sql);
+      $stmt -> execute([":nickname" => $nickname]); //on la remplace ensuite dans $id.
+      
+      chmod("profile_pictures/",0750);
+      $filename = $picture;
+      $ext = pathinfo($filename, PATHINFO_EXTENSION);
+      move_uploaded_file($_FILES['new_upload_picture']['tmp_name'],"profile_pictures/".$picture);
+      header ('location: mychatroom.php');
+
+    }
 ?>
 
    
@@ -28,12 +38,11 @@
 </div>
 
 <div class="container-profile-2">
-
-         
-            <img src="IMG/profile-10.png" class:"profile-pic" alt="">
-             <input type="file" name="upload_picture" id="upload_picture">
-          
-
+<form class="form register" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+  <input type="file" name="new_upload_picture" id="new_upload_picture">
+  <button type="submit" class="btn btn-primary">Save</button>  
+</form>
 </div>
 
 
@@ -48,7 +57,7 @@
 
               echo '<div>';
               foreach ($themes as $theme){
-                  echo '<input id="checkbox-profile" type="checkbox" value="'.$theme.'" name="checkbox">';
+                  echo '<input id="checkbox-profile" type="checkbox" value="'.$theme["name_theme"].'" name="checkbox">';
                   echo '<label class="theme-check-label">'.$theme["name_theme"].'</label>';
               }
           ?>
@@ -56,7 +65,7 @@
 
 </div>
 
-<a href="#"><button type="submit" class="btn btn-primary">Save</button></a>
+<button type="submit" class="btn btn-primary">Save</button>
 
 </body>
 

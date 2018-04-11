@@ -1,21 +1,22 @@
 <?php
     include 'header.php';
-    include 'db.php';
 
     if (!empty($_POST)){
         $chatroom_name = $_POST["chatroom_name"];
         $theme = $_POST["checkbox"];
+        $name_creator = $_SESSION["nickname"];
         
         // Vérification des identifiants
         $sql = "INSERT INTO chatroom_base 
-        VALUES (NULL, :chatroom_name, NOW(), 0, :checkbox)";
+        VALUES (NULL, :chatroom_name, NOW(), :name_creator, :checkbox)";
 
         $stmt = $dbh -> prepare($sql);
     
         //$stmt->execute(array(
         $stmt -> execute([
             ":chatroom_name" => $chatroom_name,
-            ":checkbox" => $theme
+            ":checkbox" => $theme,
+            ":name_creator" => $name_creator,
         ]);
             $id=$dbh->lastInsertId();
 
@@ -46,7 +47,7 @@
 
     echo '<div>';
     foreach ($themes as $theme){
-        echo '<input id="checkbox-profile" type="radio" value="'.$theme.'" name="checkbox">';
+        echo '<input id="checkbox-profile" type="radio" value="'.$theme["name_theme"].'" name="checkbox">';
         echo '<label class="theme-check-label">'.$theme["name_theme"].'</label>';
     }
  ?>

@@ -333,9 +333,16 @@ height: auto;
 width: 50px;
 border: none;
 }
+
 li.profil{
 width:5%;
 margin-right: 40px;
+}
+
+img.profil{
+border-radius: 50px;
+overflow: hidden;
+margin-left: 0;
 }
 
 .search { 
@@ -414,9 +421,17 @@ width: 200px;
     width: 30px;
     height: auto;
 }
+
 .container-profile-2, .container-profile-1{
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.container-profile-1 > .form-group{
+    margin-left: 0;
+}
+
 
 /* fin page profile */
 

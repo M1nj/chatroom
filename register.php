@@ -16,11 +16,9 @@
 
 
 <?php
-    $title='Inscription';
-    session_start();
-
+    $title='Inscription'; 
+    include("db.php");
     ini_set("display_errors",1);
-    include("db.php"); 
 
     //var_dump($movie);        
 
@@ -116,13 +114,11 @@
                 $_SESSION["isConnected"]= true;
                 $_SESSION['mail'] = $mail;
                 $_SESSION['nickname'] = $nickname;
-                $_SESSION['mail'] = $mail;
                 
                 chmod("profile_pictures/",0750);
                 $filename = $picture;
                 $ext = pathinfo($filename, PATHINFO_EXTENSION);
                 move_uploaded_file($_FILES['upload_picture']['tmp_name'],"profile_pictures/".$picture);
-                rename("profile_pictures/".$picture,"profile_pictures/".rand(1,100).".".$ext);
                 header ('location: mychatroom.php');
             }
 
