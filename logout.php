@@ -1,5 +1,7 @@
 <?php
 session_start();
-$_SESSION=array();//on efface toutes les variables de la session
-session_destroy(); // Puis on détruit la session
-header("Location: index.php" ) ; // On renvoie ensuite sur la page d'accueil
+$_SESSION = array();// Erase every pieces of information in $_SESSION.
+session_destroy(); // Then destroy the current session.
+
+header("Location: index.php" ) ; // The user is sent back to the homepage.
+?>

@@ -35,7 +35,6 @@ width: 10%;
 
 body{
 background: linear-gradient(114deg, #8db7d7, #9e90c1);
-height: 100%;
 }
 
 body#body{
@@ -418,8 +417,14 @@ width: 200px;
 
 #checkbox-profile {
     text-align: center;
-    width: 30px;
+    width: 20px;
     height: auto;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    margin-right: 1em;
 }
 
 .container-profile-2, .container-profile-1{
@@ -499,9 +504,8 @@ span.username{
     font-weight: bold;
 }
 
-/*div.chat_info{
-    height: 100%;
-    width: 20%;
-    margin-left: 70%;
-    float: left;
-}*/
+/*Responsive*/
+
+@media (min-width: 576px) {
+
+}
