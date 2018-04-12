@@ -30,7 +30,30 @@
         ?>
 
         <br>
+        <h2>Chatrooms you might like</h2>
+        <?php 
+            $nickname = $_SESSION['nickname'];
+            if(!empty($nickname)){
+                $sql2 ="SELECT * FROM chatroom_base INNER JOIN user_theme on chatroom_base.nom_theme = user_theme.name_theme 
+                WHERE nickname = :nickname";
 
+                $stmt = $dbh -> prepare($sql2);
+                $stmt -> execute([
+                    ":nickname" => $nickname,
+                ]);
+                $chatrooms_interest = $stmt -> fetchAll();
+
+                foreach ($chatrooms_interest as $chatroom_interest){
+                    echo '<div>'; 
+                    echo '<a href="chatroom.php?id='.$chatroom_interest['id_chatroom'].'"';           
+                    echo '<span class="chatrooms">'.$chatroom_interest['name_chatroom'].'  </span></a>';
+                    echo '<span class="chatrooms"> on '.$chatroom_interest['name_theme'].'</span>';
+                    echo '</div>';
+                }
+            }
+        ?>
+
+        <br>
         <h2>All chatrooms</h2>
         <?PHP 
             $sql ="SELECT * FROM chatroom_base ORDER BY name_chatroom";

@@ -33,13 +33,132 @@ margin: 1%;
 width: 10%;
 }
 
-body{
+.navbar.navbar-expand-lg.navbar-light.bg-light{
 background: linear-gradient(114deg, #8db7d7, #9e90c1);
 height: 100%;
 }
 body#body{
     background: white;
 }
+
+body{
+    background: rgb(138, 138, 138);
+}
+
+header {
+    background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    }
+    
+    .header-logo{
+    height: auto;
+    width: 10%;
+    float: left;
+    margin-left: 0%;
+    }
+    
+    .navbar {
+    display: block;
+    padding-right: 15px;
+     }
+    
+    .navbar ul {
+    text-align: right;
+    margin-top: 10px;   
+    }
+    
+    .navbar ul li {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .navbar ul li a {
+    display: block;
+    padding: 5px 20px;
+    background-color: none;
+    color: rgb(66, 65, 65);
+    text-transform: capitalize;
+    transition: .2s ease all;
+    cursor: pointer;
+    border-radius: 50px;
+    border-color: black;
+    /*border: 1px solid;*/
+    border-right: 10%;
+    margin-right: 40px;
+    font-family: 'poiret_oneregular';
+    }
+    
+    .navbar ul li a:hover {
+    background-color: white;
+    text-decoration-line: none;
+    }
+    
+    .navbar img {
+    height: auto;
+    width: 50px;
+    border-radius: 50px;
+    }
+    
+    li.profil{
+    width:5%;
+    margin-right: 40px;
+    }
+    
+    .search { 
+    display: inline-block; 
+    } 
+
+    .form-inline.my-2.my-lg-0{
+        width:45%;
+        margin-left: 10%;
+    }
+
+    .form-inline .form-control{
+        width: 75%;
+        border: 1px solid white;
+        height: 38px;
+    }
+
+    .btn.btn-outline-success.my-2.my-sm-0{
+        border-color: white;
+        color: white;
+    }
+
+    ul.menu2{
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    }
+     
+    .search input { 
+    margin: 10px; 
+    padding: 10px; 
+    padding-bottom: 5px; 
+    width: 400px; 
+    height: 36px; 
+    background-color: transparent; 
+    color:rgb(66, 65, 65); 
+    border: 1px solid; 
+    outline: none; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    margin-right: 40px; 
+    transition: .2s ease all; 
+    font-family: 'poiret_oneregular'; 
+    padding: 10px 20px 10px; 
+    } 
+     
+    .search input:focus { 
+    border: 2px solid rgba(136, 76, 233, 0.407);     
+    } 
+     
+    .search img { 
+    height: 36px; 
+    width: auto; 
+    border: none; 
+    display: inline-block; 
+    margin-left:0px;  
+    } 
+/* fin du header*/ 
 
 
 /* home avec sign in et sign up */
@@ -279,99 +398,9 @@ vertical-align: middle;
 
 /* header */
 
-header {
-background: linear-gradient(114deg, #8db7d7, #9e90c1);
-}
+/* Header */
 
-.header-logo{
-height: auto;
-width: 10%;
-float: left;
-margin-left: 0%;
-}
-
-.navbar {
-display: block;
-padding-right: 15px;
- }
-
-.navbar ul {
-text-align: right;
-margin-top: 10px;
-    
-}
-
-.navbar ul li {
-    display: inline-block;
-    position: relative;
-}
-
-.navbar ul li a {
-display: block;
-padding: 5px 20px;
-background-color: none;
-color: rgb(66, 65, 65);
-text-transform: capitalize;
-transition: .2s ease all;
-cursor: pointer;
-border-radius: 50px;
-border-color: black;
-border: 1px solid;
-border-right: 10%;
-margin-right: 40px;
-font-family: 'poiret_oneregular';
-    
-}
-
-.navbar ul li a:hover {
-background-color: white;
-text-decoration-line: none;
-}
-
-.navbar img {
-height: auto;
-width: 50px;
-border: none;
-}
-li.profil{
-width:5%;
-margin-right: 40px;
-}
-
-.search { 
-display: inline-block; 
-} 
- 
-.search input { 
-margin: 10px; 
-padding: 10px; 
-padding-bottom: 5px; 
-width: 400px; 
-height: 36px; 
-background-color: transparent; 
-color:rgb(66, 65, 65); 
-border: 1px solid; 
-outline: none; 
-text-decoration: none; 
-border-radius: 50px; 
-margin-right: 40px; 
-transition: .2s ease all; 
-font-family: 'poiret_oneregular'; 
-padding: 10px 20px 10px; 
-} 
- 
-.search input:focus { 
-border: 2px solid rgba(136, 76, 233, 0.407); 
-     
-} 
- 
-.search img { 
-height: 36px; 
-width: auto; 
-border: none; 
-display: inline-block; 
-margin-left:0px;  
-} 
+/* Fin header */ 
 
  
 /* chatroom */ 
@@ -389,6 +418,13 @@ font-family: 'poiret_oneregular';
 input#send:hover {
     background-color: white;
     text-decoration-line: none;
+}
+
+p.chatroom_title{
+    font-family: 'poiret_oneregular'; 
+    font-size: 160%;
+    background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    color:white;
 }
 
 input#message{
@@ -455,8 +491,14 @@ text-align: center;
 width: 30px;
 height: auto;
 }
-.container-profile-2, .container-profile-1{
+
+div.container-profile-1{
 width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+input#new_upload_picture{
+    width: 22%;
 }
 
 /* fin page profile */
