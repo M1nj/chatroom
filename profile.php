@@ -1,18 +1,20 @@
 <?php
     include("Layout/header.php");
     $nickname = $_SESSION['nickname'];
-
-    if(isset($picture)){
-      $sql = "INSERT INTO profile_picture FROM user_base
+    
+    if(!empty($_FILES["new_upload_picture"])){
+      $picture = $_FILES["new_upload_picture"]['name'];
+      
+      $sql = "UPDATE user_base SET profile_picture = :picture
               WHERE nickname = :nickname";
 
       $stmt = $dbh -> prepare($sql);
-      $stmt -> execute([":nickname" => $nickname]); //on la remplace ensuite dans $id.
-      
+      $stmt -> execute([":nickname" => $nickname,
+                        ":picture" => $picture]); //on la remplace ensuite dans $id.
+
       chmod("profile_pictures/",0750);
-      $filename = $picture;
-      $ext = pathinfo($filename, PATHINFO_EXTENSION);
-      move_uploaded_file($_FILES['new_upload_picture']['tmp_name'],"profile_pictures/".$picture);
+      $ext = pathinfo($picture, PATHINFO_EXTENSION);
+      move_uploaded_file($_FILES["new_upload_picture"]['tmp_name'],"profile_pictures/".$picture);
       header ('location: mychatroom.php');
     }
 ?>
@@ -23,7 +25,7 @@
     <input type="text" class="form-control" name="nickname" placeholder="<?PHP echo $_SESSION["nickname"]?>">
   </div>
   <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail" name="mail"aria-describedby="emailHelp" placeholder="<?PHP echo $_SESSION["mail"]?>">
+    <input type="email" class="form-control" id="exampleInputEmail" name="mail" aria-describedby="emailHelp" placeholder="<?PHP echo $_SESSION["mail"]?>">
   </div>
   <div class="form-group">
     <input type="password" class="form-control" name="password"id="exampleInputPassword" placeholder="<?PHP echo $_SESSION["password"]?>">
