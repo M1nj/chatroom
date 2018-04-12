@@ -41,10 +41,12 @@
     <div class="user_inputs">
         <input type="text" id="message" placeholder="Type your message"></input>
         <input type="submit" id="send" value="Send"></input>
-        <form method="post" action="delete_chatroom.php">
+        <span>
+        <form method="post"  action="delete_chatroom.php">
             <input type="hidden" value="<?php echo $chatroom_info["id_chatroom"];?>" name="id_chatroom" required>
-            <input type="submit" name="delete_chatroom" id="delete_chatroom" value="Delete this chatroom" action="delete_chatroom.php">
+            <input type="submit" name="delete_chatroom" id="delete" value="Delete this chatroom" action="delete_chatroom.php">
         </form>
+        </span
     </div>
     
     <!--Load socket.io-->
