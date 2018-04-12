@@ -1,5 +1,5 @@
 <?php
-    include("header.php");
+    include("Layout/header.php");
 
     $search = $_GET['the_search'];
 

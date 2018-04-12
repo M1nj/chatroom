@@ -385,6 +385,10 @@ input#send{
 width:15%;
 }
 
+input#delete_chatroom{
+    width: auto;
+}
+
 input#message{
 width:45%;
 }

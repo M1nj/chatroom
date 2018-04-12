@@ -16,7 +16,7 @@
 </head>
 
 <?php 
-    include("db.php");
+    include("Layout/db.php");
     ini_set("display_errors",1);
     $error = "";
     

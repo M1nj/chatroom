@@ -1,5 +1,5 @@
 <?php
-    include('header.php');
+    include("Layout/header.php");
     $id = $_GET['id'];
   
     $sql ="SELECT * FROM chatroom_base
@@ -7,14 +7,14 @@
      
     $stmt = $dbh -> prepare($sql);
     $stmt -> execute([":id" => $id]);
-    $titles = $stmt -> fetchAll();   
+    $chatroom_infos = $stmt -> fetchAll();   
 ?>
 
 <body id="body">
     <div class="chat_info">
         <?PHP 
-            foreach($titles as $title){
-                echo("<p class='chatroom_title'>".$title["name_chatroom"]."</p>");
+            foreach($chatroom_infos as $chatroom_info){
+                echo("<p class='chatroom_title'>".$chatroom_info["name_chatroom"]."</p>");
             }
         ?>
     </div>
@@ -41,6 +41,10 @@
     <div class="user_inputs">
         <input type="text" id="message" placeholder="Type your message"></input>
         <input type="submit" id="send" value="Send"></input>
+        <form method="post" action="delete_chatroom.php">
+            <input type="hidden" value="<?php echo $chatroom_info["id_chatroom"];?>" name="id_chatroom" required>
+            <input type="submit" name="delete_chatroom" id="delete_chatroom" value="Delete this chatroom" action="delete_chatroom.php">
+        </form>
     </div>
     
     <!--Load socket.io-->
@@ -62,5 +66,6 @@
             $("#chats").append(data.nickname, ':', data.content,"</br>");
         });
     </script>
+    
 </body>
 </html>

@@ -21,7 +21,7 @@
         $title='Connexion';
         session_start();
         ini_set("display_errors",1);
-        include("db.php");
+        include("Layout/db.php");
 
         if (!empty($_POST)){
             $nickname = $_POST["nickname"];
