@@ -29,7 +29,6 @@
 
 
 /* Header */
-
 html{
 height: 100%;
 }
@@ -58,6 +57,7 @@ width: 10%;
 
 body{
 background: linear-gradient(114deg, #8db7d7, #9e90c1);
+height: 100%;
 }
 
 body#body{
@@ -66,8 +66,7 @@ background: white;
 /* fin du header*/ 
 
 
-/* home avec sign in et sign up */
-
+/* Index - Home avec sign in et sign up */
 p.hometext{
 font-family: 'poiret_oneregular';
 color: white;
@@ -121,156 +120,16 @@ button.btn.btn-secondary:hover{
 background-color: lightgrey;
 color: white;
 }
-/* fin de la home */
-
-
-/* page register */ 
-
-button.btn.btn-warning{
-color: white;
-border-color: white;
-}
-    
-button.btn.btn-warning:hover{
-background-color: lightgrey;
-border-color: white;
-}
-
-/* fin page register */ 
-
-
-
-img.logo{
-height: auto;
-width: 30%;
-margin-left: 0;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-
-
-
-h3{
-color: white;
-font-size: 16px;
-}
-
-.title{
-font-size: 40px;
-color: white;
-}
-
-p{
-color: black;
-}
 
 img {
 height: 100%;
 width: 20%;
 margin-left: 20%;
 }
-
-img.logo_cc {
-height: 30%;
-width: auto;
-margin-left: 30%;
-}
+/* Fin Index - Home */
 
 
-.container{
-margin-left: auto;
-margin-right: auto;
-width: 700px;
-}
-
-.form{
-display: block;
-margin-top: 40px;
-}
-
-.form-group{
-border: none;
-border-bottom: solid 1px #474544;
-font-size: 10px;
-font-weight: 400;
-letter-spacing: 0,5px;
-margin: 0em 0 1.875em 0;
-padding: 0 0 0.300em 0;
-text-transform: uppercase;
-width: 400px;
-margin-left: 120px;
-}
-
-.form-check{
-color: black;
-font-size: 10px;
-height: 30px;
-}
-
-.form-control::placeholder{
-color: white;
-opacity: 1;
-}
-
-.form-control{
-border:none;
-background: transparent;
-}
-
-
-.form-check-label{
-font-size: 12px;
-color: black;
-margin-top: 14px;
-}
-
-.btn-primary{
-font-family: 'poiret_oneregular';
-background-color: #ffffff;  
-width: 80px;
-margin: 20px;
-border-radius: 50px;
-margin-right: 40px;
-color: black;
-}
-
-.btn-primary:hover{
-font-family: 'poiret_oneregular';
-background-color: grey;
-color: white;
-border-color: white;
-border-width: 2%;
-width: 80px;
-}
-
-
-input{
-width: 100%;
-height: 30px;
-}
-
-.btn-warning{
-font-family: 'poiret_oneregular';
-background-color: #00000000;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-width: 210px;
-margin-right: 40px;
-}
-
-.btn-warning:hover{
-font-family: 'poiret_oneregular';
-background-color: grey;
-color: white;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-width: 210px;
-}
-
+/* Cookies */ 
 div.cookies{
 background-color: #00000070;
 bottom: 0%;
@@ -284,9 +143,10 @@ span{
 display: inline-block;
 vertical-align: middle;
 }
+/* Fin cookies */ 
 
-/* header */
 
+/* Header */
 header {
 background: linear-gradient(114deg, #8db7d7, #9e90c1);
 }
@@ -305,8 +165,7 @@ padding-right: 15px;
 
 .navbar ul {
 text-align: right;
-margin-top: 10px;
-    
+margin-top: 10px;   
 }
 
 .navbar ul li {
@@ -328,7 +187,6 @@ border: 1px solid;
 border-right: 10%;
 margin-right: 40px;
 font-family: 'poiret_oneregular';
-    
 }
 
 .navbar ul li a:hover {
@@ -341,16 +199,9 @@ height: auto;
 width: 50px;
 border: none;
 }
-
 li.profil{
 width:5%;
 margin-right: 40px;
-}
-
-img.profil{
-border-radius: 50px;
-overflow: hidden;
-margin-left: 0;
 }
 
 .search { 
@@ -376,8 +227,7 @@ padding: 10px 20px 10px;
 } 
  
 .search input:focus { 
-border: 2px solid rgba(136, 76, 233, 0.407); 
-     
+border: 2px solid rgba(136, 76, 233, 0.407);     
 } 
  
 .search img { 
@@ -387,15 +237,93 @@ border: none;
 display: inline-block; 
 margin-left:0px;  
 } 
+/* Fin header */ 
 
+/* Sweet alert */ 
+button#valid_button{
+background-color: white;
+color: black;
+border-color: black;
+border-width: 2%;
+border-radius: 50px;
+margin-left: 5%;
+width: 30%;
+}
+        
+button#valid_button:hover{
+color: white;
+border-color: white;
+border-width: 2%;
+border-radius: 50px;
+margin-left: 5%;
+width: 30%;
+}       
+/* Fin sweet alert */ 
+
+/* Page Register */
+img.logo_cc {
+height: 30%;
+width: auto;
+margin-left: 30%;
+}
+    
+img.logo{
+height: auto;
+width: 30%;
+margin-left: 0;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+    
+button.btn.btn-warning{
+color: white;
+border-color: white;
+}
+        
+button.btn.btn-warning:hover{
+background-color: lightgrey;
+border-color: white;
+}
+    
+h3{
+color: white;
+font-size: 16px;
+}
+    
+.title{
+font-size: 40px;
+color: white;
+}
+    
+input{
+width: 100%;
+height: 30px;
+}
+    
+.container{
+margin-left: auto;
+margin-right: auto;
+width: 700px;
+}
+    
+.form-check{
+color: black;
+font-size: 10px;
+height: 30px;
+}
+    
+.form-check-label{
+font-size: 12px;
+color: black;
+margin-top: 14px;
+}
+/* Fin page Register */ 
+    
  
-/* chatroom */ 
+/* Page Chatroom */ 
 input#send{
 width:15%;
-}
-
-input#delete_chatroom{
-    width: auto;
 }
 
 input#message{
@@ -420,39 +348,55 @@ font-size: 15px;
 .form-control-chatroom:placeholder{
 color:black;
 }
+/* Page Chatroom */ 
 
 
-/* page profile */
-
+/* Page Profile */
 .profile-pic img {
 width: 200px;
 }
 
 #checkbox-profile {
-    text-align: center;
-    width: 20px;
-    height: auto;
+text-align: center;
+width: 30px;
+height: auto;
 }
 
-label{
-    display: inline-block;
-    margin-bottom: .5rem;
-    margin-right: 1em;
+.container-profile-2{
+width: 50%;
 }
 
-.container-profile-2, .container-profile-1{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+.form{
+display: block;
+margin-top: 40px;
 }
 
-.container-profile-1 > .form-group{
-    margin-left: 0;
+.form-group{
+border: none;
+border-bottom: solid 1px #474544;
+font-size: 10px;
+font-weight: 400;
+letter-spacing: 0,5px;
+margin: 0em 0 1.875em 0;
+padding: 0 0 0.300em 0;
+text-transform: uppercase;
+width: 400px;
+margin-left: 120px;
 }
 
+.form-control::placeholder{
+color: white;
+opacity: 1;
+}
+    
+.form-control{
+border:none;
+background: transparent;
+}
+/* Fin page profile */
 
-/* fin page profile */
 
+/* Page My Chatroom */ 
 h1{
 font-family:'poiret_oneregular';
 font-size: 40px; 
@@ -486,8 +430,13 @@ border-color: white;
 border-width: 2%;
 }
 
-/* Page Create a chatroom */
+p{
+color: black;
+}
+/* Fin page My Chatroom */ 
 
+
+/* Page Create a chatroom */
 .form-control-createchatroom{
 border: none;
 background: transparent;
@@ -501,25 +450,68 @@ font-family: 'poiret_oneregular';
 font-size: 14px;
 }
 
-/*Messages*/
+.btn-primary{
+font-family: 'poiret_oneregular';
+background-color: #ffffff;  
+width: 80px;
+margin: 20px;
+border-radius: 50px;
+margin-right: 40px;
+color: black;
+}
+    
+.btn-primary:hover{
+font-family: 'poiret_oneregular';
+background-color: grey;
+color: white;
+border-color: white;
+border-width: 2%;
+width: 80px;
+}
 
+.btn-warning{
+font-family: 'poiret_oneregular';
+background-color: #00000000;
+border-color: white;
+border-width: 2%;
+border-radius: 50px;
+width: 210px;
+margin-right: 40px;
+}
+    
+.btn-warning:hover{
+font-family: 'poiret_oneregular';
+background-color: grey;
+color: white;
+border-color: white;
+border-width: 2%;
+border-radius: 50px;
+width: 210px;
+}   
+/* Fin page Create a chatroom */ 
+
+
+/* Page Messages */
 div.message{
-    border-radius: 50px;
-    background: lightgray;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-    overflow: hidden;
+border-radius: 50px;
+background: lightgray;
+width: 30%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 1%;
+overflow: hidden;
 }
 
 span.username{
-    background-color: pink;
-    font-weight: bold;
+background-color: pink;
+font-weight: bold;
 }
+/* Fin page Message */ 
 
-/*Responsive*/
 
-@media (min-width: 576px) {
-
-}
+/*div.chat_info{
+    height: 100%;
+    width: 20%;
+    margin-left: 70%;
+    float: left;
+}*/
