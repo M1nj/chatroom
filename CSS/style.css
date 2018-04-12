@@ -1,51 +1,410 @@
-
+/*General*/ 
 @font-face {
-font-family: 'poiret_oneregular';
-src: url('../font/poiretone-regular-webfont.woff2') format('woff2'),
-     url('../font/poiretone-regular-webfont.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-}
-
-html{
-height: 100%;
-}
-
-div#home:first-child {
-text-align: center;
-vertical-align: middle;
-margin-top: 40%;
-margin-bottom: 30px;
-}
-
-div#home {
-text-align: center;
-vertical-align: middle;
-}
-
-div#image{
-height: 300px;
-text-align: center;
-}
-
-button#button{
-margin: 1%;
-width: 10%;
-}
-
-.navbar.navbar-expand-lg.navbar-light.bg-light{
-background: linear-gradient(114deg, #8db7d7, #9e90c1);
-height: 100%;
-}
-body#body{
-    background: white;
-}
-
-body{
-    background: rgb(138, 138, 138);
-}
-
-header {
+    font-family: 'poiret_oneregular';
+    src: url('../font/poiretone-regular-webfont.woff2') format('woff2'),
+         url('../font/poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    html{
+    height: 100%;
+    }
+    
+    div#home:first-child {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 40%;
+    margin-bottom: 30px;
+    }
+    
+    div#home {
+    text-align: center;
+    vertical-align: middle;
+    }
+    
+    div#image{
+    height: 300px;
+    text-align: center;
+    }
+    
+    button#button{
+    margin: 1%;
+    width: 10%;
+    }
+    
+    .navbar.navbar-expand-lg.navbar-light.bg-light{
+    background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    height: 100%;
+    }
+    body#body{
+        background: white;
+    }
+    
+    body{
+        background: rgb(138, 138, 138);
+    }
+    
+    a, p , span{
+        font-family: 'poiret_oneregular';
+    }
+    /*End of general*/ 
+    
+    /* Début du header*/ 
+    header {
+        background: linear-gradient(114deg, #8db7d7, #9e90c1);
+        }
+        
+        .header-logo{
+        height: auto;
+        width: 10%;
+        float: left;
+        margin-left: 0%;
+        }
+        
+        .navbar {
+        display: block;
+        padding-right: 15px;
+         }
+        
+        .navbar ul {
+        text-align: right;
+        margin-top: 10px;   
+        }
+        
+        .navbar ul li {
+            display: inline-block;
+            position: relative;
+        }
+        
+        .navbar ul li a {
+        display: block;
+        padding: 5px 20px;
+        background-color: none;
+        color: rgb(66, 65, 65);
+        text-transform: capitalize;
+        transition: .2s ease all;
+        cursor: pointer;
+        border-radius: 50px;
+        border-color: black;
+        /*border: 1px solid;*/
+        border-right: 10%;
+        margin-right: 40px;
+        font-family: 'poiret_oneregular';
+        }
+        
+        .navbar ul li a:hover {
+        background-color: white;
+        text-decoration-line: none;
+        }
+        
+        .navbar img {
+        height: auto;
+        width: 50px;
+        border-radius: 50px;
+        }
+        
+        li.profil{
+        width:5%;
+        margin-right: 40px;
+        }
+        
+        .search { 
+        display: inline-block; 
+        } 
+    
+        .form-inline.my-2.my-lg-0{
+            width:45%;
+            margin-left: 10%;
+        }
+    
+        .form-inline .form-control{
+            width: 75%;
+            border: 1px solid white;
+            height: 38px;
+        }
+    
+        .btn.btn-outline-success.my-2.my-sm-0{
+            border-color: white;
+            color: white;
+        }
+    
+        ul.menu2{
+        padding-left: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        }
+         
+        .search input { 
+        margin: 10px; 
+        padding: 10px; 
+        padding-bottom: 5px; 
+        width: 400px; 
+        height: 36px; 
+        background-color: transparent; 
+        color:rgb(66, 65, 65); 
+        border: 1px solid; 
+        outline: none; 
+        text-decoration: none; 
+        border-radius: 50px; 
+        margin-right: 40px; 
+        transition: .2s ease all; 
+        font-family: 'poiret_oneregular'; 
+        padding: 10px 20px 10px; 
+        } 
+         
+        .search input:focus { 
+        border: 2px solid rgba(136, 76, 233, 0.407);     
+        } 
+         
+        .search img { 
+        height: 36px; 
+        width: auto; 
+        border: none; 
+        display: inline-block; 
+        margin-left:0px;  
+        } 
+    /* fin du header*/ 
+    
+    
+    /* home avec sign in et sign up */
+    
+    p.hometext{
+    font-family: 'poiret_oneregular';
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 40%;
+    }
+    
+    button.btn.btn-primary:first-child{
+    font-family: 'poiret_oneregular';
+    background-color: white;
+    color: black;
+    border-width: 2%;
+    border-radius: 50px;
+    width: 80px;
+    }
+    
+    button.btn.btn-secondary:first-child{
+    font-family: 'poiret_oneregular';
+    background-color: #ffffff;
+    color: black;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    }
+    
+    button.btn.btn-primary{
+    color: black;
+    border-color: white;
+    }
+    
+    button.btn.btn-primary:hover{
+    color: white;
+    background-color: grey;
+    border-color: white;
+    }
+    
+    /* fin de la home */
+    
+    
+    
+    /* page register */ 
+    
+    button.btn.btn-warning{
+    color: white;
+    border-color: white;
+    }
+        
+    button.btn.btn-warning:hover{
+    background-color: lightgrey;
+    border-color: white;
+    }
+    
+    /* fin page register */ 
+    
+    img.logo{
+    height: auto;
+    width: 30%;
+    margin-left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    div{
+    text-align: center;
+    }
+    
+    button.btn.btn-secondary{
+    background-color: #ffffff;
+    color: black;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    }
+    
+    button.btn.btn-secondary:hover{
+    background-color: lightgrey;
+    color: white;
+    }
+    
+    button#valid_button{
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-width: 2%;
+    border-radius: 50px;
+    margin-left: 5%;
+    width: 30%;
+    }
+    
+    button#valid_button:hover{
+    color: white;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    margin-left: 5%;
+    width: 30%;
+    }
+    
+    h3{
+    color: white;
+    font-size: 16px;
+    }
+    
+    .title{
+    font-size: 40px;
+    color: white;
+    }
+    
+    p{
+    color: black;
+    }
+    
+    img {
+    height: 100%;
+    width: 20%;
+    margin-left: 20%;
+    }
+    
+    img.logo_cc {
+    height: 30%;
+    width: auto;
+    margin-left: 30%;
+    }
+    
+    
+    .container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    }
+    
+    .form{
+    display: block;
+    margin-top: 40px;
+    }
+    
+    .form-group{
+    border: none;
+    border-bottom: solid 1px #474544;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0,5px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.300em 0;
+    text-transform: uppercase;
+    width: 400px;
+    margin-left: 120px;
+    }
+    
+    .form-check{
+    color: black;
+    font-size: 10px;
+    height: 30px;
+    }
+    
+    .form-control::placeholder{
+    color: white;
+    opacity: 1;
+    }
+    
+    .form-control{
+    border:none;
+    background: transparent;
+    }
+    
+    
+    .form-check-label{
+    font-size: 12px;
+    color: black;
+    margin-top: 14px;
+    }
+    
+    .btn-primary{
+    font-family: 'poiret_oneregular';
+    background-color: #ffffff;  
+    width: 80px;
+    margin: 20px;
+    border-radius: 50px;
+    margin-right: 40px;
+    color: black;
+    }
+    
+    .btn-primary:hover{
+    font-family: 'poiret_oneregular';
+    background-color: grey;
+    color: white;
+    border-color: white;
+    border-width: 2%;
+    width: 80px;
+    }
+    
+    
+    input{
+    width: 100%;
+    height: 30px;
+    }
+    
+    .btn-warning{
+    font-family: 'poiret_oneregular';
+    background-color: #00000000;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    width: 210px;
+    margin-right: 40px;
+    }
+    
+    .btn-warning:hover{
+    font-family: 'poiret_oneregular';
+    background-color: grey;
+    color: white;
+    border-color: white;
+    border-width: 2%;
+    border-radius: 50px;
+    width: 210px;
+    }
+    
+    div.cookies{
+    background-color: #00000070;
+    bottom: 0%;
+    position: absolute;
+    width: 100%;
+    color: white;
+    height: 10%;
+    padding-top: 1%;
+    }
+    span{
+    display: inline-block;
+    vertical-align: middle;
+    }
+    
+    /* header */
+    
+    header {
     background: linear-gradient(114deg, #8db7d7, #9e90c1);
     }
     
@@ -63,7 +422,8 @@ header {
     
     .navbar ul {
     text-align: right;
-    margin-top: 10px;   
+    margin-top: 10px;
+        
     }
     
     .navbar ul li {
@@ -81,10 +441,11 @@ header {
     cursor: pointer;
     border-radius: 50px;
     border-color: black;
-    /*border: 1px solid;*/
+    border: 1px solid;
     border-right: 10%;
     margin-right: 40px;
     font-family: 'poiret_oneregular';
+        
     }
     
     .navbar ul li a:hover {
@@ -95,9 +456,8 @@ header {
     .navbar img {
     height: auto;
     width: 50px;
-    border-radius: 50px;
+    border: none;
     }
-    
     li.profil{
     width:5%;
     margin-right: 40px;
@@ -106,28 +466,6 @@ header {
     .search { 
     display: inline-block; 
     } 
-
-    .form-inline.my-2.my-lg-0{
-        width:45%;
-        margin-left: 10%;
-    }
-
-    .form-inline .form-control{
-        width: 75%;
-        border: 1px solid white;
-        height: 38px;
-    }
-
-    .btn.btn-outline-success.my-2.my-sm-0{
-        border-color: white;
-        color: white;
-    }
-
-    ul.menu2{
-    padding-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    }
      
     .search input { 
     margin: 10px; 
@@ -148,7 +486,8 @@ header {
     } 
      
     .search input:focus { 
-    border: 2px solid rgba(136, 76, 233, 0.407);     
+    border: 2px solid rgba(136, 76, 233, 0.407); 
+         
     } 
      
     .search img { 
@@ -158,394 +497,157 @@ header {
     display: inline-block; 
     margin-left:0px;  
     } 
-/* fin du header*/ 
-
-
-/* home avec sign in et sign up */
-
-p.hometext{
-font-family: 'poiret_oneregular';
-color: white;
-margin-bottom: 10px;
-text-align: left;
-margin-left: 40%;
-}
-
-button.btn.btn-primary:first-child{
-font-family: 'poiret_oneregular';
-background-color: white;
-color: black;
-border-width: 2%;
-border-radius: 50px;
-width: 80px;
-}
-
-button.btn.btn-secondary:first-child{
-font-family: 'poiret_oneregular';
-background-color: #ffffff;
-color: black;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-}
-
-button.btn.btn-primary{
-color: black;
-border-color: white;
-}
-
-button.btn.btn-primary:hover{
-color: white;
-background-color: grey;
-border-color: white;
-}
-
-/* fin de la home */
-
-
-
-/* page register */ 
-
-button.btn.btn-warning{
-color: white;
-border-color: white;
-}
+    /* Header */
     
-button.btn.btn-warning:hover{
-background-color: lightgrey;
-border-color: white;
-}
-
-/* fin page register */ 
-
-img.logo{
-height: auto;
-width: 30%;
-margin-left: 0;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-div{
-text-align: center;
-}
-
-button.btn.btn-secondary{
-background-color: #ffffff;
-color: black;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-}
-
-button.btn.btn-secondary:hover{
-background-color: lightgrey;
-color: white;
-}
-
-button#valid_button{
-background-color: white;
-color: black;
-border-color: black;
-border-width: 2%;
-border-radius: 50px;
-margin-left: 5%;
-width: 30%;
-}
-
-button#valid_button:hover{
-color: white;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-margin-left: 5%;
-width: 30%;
-}
-
-h3{
-color: white;
-font-size: 16px;
-}
-
-.title{
-font-size: 40px;
-color: white;
-}
-
-p{
-color: black;
-}
-
-img {
-height: 100%;
-width: 20%;
-margin-left: 20%;
-}
-
-img.logo_cc {
-height: 30%;
-width: auto;
-margin-left: 30%;
-}
-
-
-.container{
-margin-left: auto;
-margin-right: auto;
-width: 700px;
-}
-
-.form{
-display: block;
-margin-top: 40px;
-}
-
-.form-group{
-border: none;
-border-bottom: solid 1px #474544;
-font-size: 10px;
-font-weight: 400;
-letter-spacing: 0,5px;
-margin: 0em 0 1.875em 0;
-padding: 0 0 0.300em 0;
-text-transform: uppercase;
-width: 400px;
-margin-left: 120px;
-}
-
-.form-check{
-color: black;
-font-size: 10px;
-height: 30px;
-}
-
-.form-control::placeholder{
-color: white;
-opacity: 1;
-}
-
-.form-control{
-border:none;
-background: transparent;
-}
-
-
-.form-check-label{
-font-size: 12px;
-color: black;
-margin-top: 14px;
-}
-
-.btn-primary{
-font-family: 'poiret_oneregular';
-background-color: #ffffff;  
-width: 80px;
-margin: 20px;
-border-radius: 50px;
-margin-right: 40px;
-color: black;
-}
-
-.btn-primary:hover{
-font-family: 'poiret_oneregular';
-background-color: grey;
-color: white;
-border-color: white;
-border-width: 2%;
-width: 80px;
-}
-
-
-input{
-width: 100%;
-height: 30px;
-}
-
-.btn-warning{
-font-family: 'poiret_oneregular';
-background-color: #00000000;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-width: 210px;
-margin-right: 40px;
-}
-
-.btn-warning:hover{
-font-family: 'poiret_oneregular';
-background-color: grey;
-color: white;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-width: 210px;
-}
-
-div.cookies{
-background-color: #00000070;
-bottom: 0%;
-position: absolute;
-width: 100%;
-color: white;
-height: 10%;
-padding-top: 1%;
-}
-span{
-display: inline-block;
-vertical-align: middle;
-}
-
-/* header */
-
-/* Header */
-
-/* Fin header */ 
-
- 
-/* chatroom */ 
-input#send{
-width: 5%;
-height: 36px;
-border-radius: 50px;
-border: solid 1px;
-background-color: transparent; 
-margin-bottom: 10px;
-margin-left: 20px;
-font-family: 'poiret_oneregular'; 
-}
-
-input#send:hover {
-    background-color: white;
-    text-decoration-line: none;
-}
-
-p.chatroom_title{
-    font-family: 'poiret_oneregular'; 
-    font-size: 160%;
-    background: linear-gradient(114deg, #8db7d7, #9e90c1);
-    color:white;
-}
-
-input#message{
-width:55%;
-height: 36px;
-border: none;
-border-radius: 50px;
-font-family: 'poiret_oneregular'; 
-padding: 15px 20px 15px;
-margin-bottom: 10px;
-}
-
-input#delete{
-    width: auto;
+    /* Fin header */ 
+    
+     
+    /* chatroom */ 
+    input#send{
+    width: 5%;
     height: 36px;
     border-radius: 50px;
     border: solid 1px;
     background-color: transparent; 
-    font-family: 'poiret_oneregular'; 
+    margin-bottom: 10px;
     margin-left: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    
+    font-family: 'poiret_oneregular'; 
     }
     
-    input#delete:hover {
-        background-color: rgba(235, 79, 79, 0.815);
+    input#send:hover {
+        background-color: white;
         text-decoration-line: none;
     }
-
-div.user_inputs{
-background: linear-gradient(114deg, #8db7d7, #9e90c1);
-bottom: 0%;
-position: absolute;
-width: 100%;
-color: white;
-height: 10%;
-padding-top: 1%;
-}
-
-.form-control-chatroom{
-font-family: 'poiret_oneregular';
-font-size: 15px;
-}
-
-.form-control-chatroom:placeholder{
-color:black;
-}
-
-
-/* page profile */
-
-.profile-pic img {
-width: 200px;
-}
-
-.profile-pic img:hover {
-width: 200px;
-background-color: white;
-}
-
-#checkbox-profile {
-text-align: center;
-width: 30px;
-height: auto;
-}
-
-div.container-profile-1{
-width: 50%;
-margin-left: auto;
-margin-right: auto;
-}
-input#new_upload_picture{
-    width: 22%;
-}
-
-/* fin page profile */
-
-h1{
-font-family:'poiret_oneregular';
-font-size: 40px; 
-padding-left: 10px;
-margin: 30px;
-}
-
-h2{
-font-family:'poiret_oneregular';
-font-size: 25px;
-display: inline-block;
-position: relative;
-margin: 40px;
-}
-
-.btn-create{
-font-family: 'poiret_oneregular';
-background-color: white;
-border-color: white;
-border-width: 2%;
-border-radius: 50px;
-width: 80px;
-margin-left: 60px;
-}
-
-.btn-create:hover{
-background-color: lightgrey;
-color: white;
-border-color: white;
-border-width: 2%;
-}
-
-/* Page Create a chatroom */
-
-.form-control-createchatroom{
-border: none;
-background: transparent;
-font-family: 'poiret_oneregular';
-font-size: 14px;
-}
     
-.form-control-createchatroom::placeholder{
-color: black;
-font-family: 'poiret_oneregular';
-font-size: 14px;
-}
+    p.chatroom_title{
+        font-family: 'poiret_oneregular'; 
+        font-size: 160%;
+        background: linear-gradient(114deg, #8db7d7, #9e90c1);
+        color:white;
+    }
+    
+    input#message{
+    width:55%;
+    height: 36px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'poiret_oneregular'; 
+    padding: 15px 20px 15px;
+    margin-bottom: 10px;
+    }
+    
+    input#delete{
+        width: auto;
+        height: 36px;
+        border-radius: 50px;
+        border: solid 1px;
+        background-color: transparent; 
+        font-family: 'poiret_oneregular'; 
+        margin-left: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+        
+        }
+        
+        input#delete:hover {
+            background-color: rgba(235, 79, 79, 0.815);
+            text-decoration-line: none;
+        }
+    
+    div.user_inputs{
+    background: linear-gradient(114deg, #8db7d7, #9e90c1);
+    bottom: 0%;
+    position: absolute;
+    width: 100%;
+    color: white;
+    height: 10%;
+    padding-top: 1%;
+    }
+    
+    .form-control-chatroom{
+    font-family: 'poiret_oneregular';
+    font-size: 15px;
+    }
+    
+    .form-control-chatroom:placeholder{
+    color:black;
+    }
+    
+    
+    /* page profile */
+    
+    .profile-pic img {
+    width: 200px;
+    }
+    
+    .profile-pic img:hover {
+    width: 200px;
+    background-color: white;
+    }
+    
+    .theme-check-label{
+        margin-right: 20px;
+    }
+    
+    #checkbox-profile {
+    text-align: center;
+    width: 20px;
+    height: auto;
+    }
+    
+    div.container-profile-1{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    input#new_upload_picture{
+        width: 22%;
+    }
+    
+    /* fin page profile */
+    
+    h1{
+    font-family:'poiret_oneregular';
+    font-size: 40px; 
+    padding-left: 10px;
+    margin: 30px;
+    }
+    
+    h2{
+    font-family:'poiret_oneregular';
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    margin: 40px;
+    }
+    
+    .btn-create{
+    font-family: 'poiret_oneregular';
+    background-color: white;
+    border-color: green;
+    border-width: 2%;
+    border-radius: 50px;
+    width: 80px;
+    }
+    
+    .btn-create:hover{
+    background-color: green;
+    color: white;
+    border-color: green;
+    border-width: 2%;
+    }
+    
+    /* Page Create a chatroom */
+    
+    .form-control-createchatroom{
+    border: none;
+    background: transparent;
+    font-family: 'poiret_oneregular';
+    font-size: 14px;
+    }
+        
+    .form-control-createchatroom::placeholder{
+    color: black;
+    font-family: 'poiret_oneregular';
+    font-size: 14px;
+    }
